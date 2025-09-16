@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio5</title>
+</head>
+<body>
+<script>
+  /*
+ 5. Introducir el precio de un articulo. Calcular el iva y el precio total(con el iva incluido) que debe salir redondeado a dos decimales.
+  */
+
+  let articulo = parseFloat(prompt("Introduce el precio del artículo"));
+  let iva;
+  if (articulo < 100) {
+    iva = 1.21;
+  }else if (articulo >= 100 && articulo <= 1000) {
+    iva = 1.1;
+  }else if (articulo > 1000) {
+    iva = 1.04;
+  }
+
+  let importeIVA = articulo * iva;
+  let total = articulo + importeIVA;
+
+  alert(
+    "Precio sin IVA: " + articulo.toFixed(2) +
+    "\nIVA: " + importeIVA.toFixed(2) +
+    "\nPrecio con IVA: " + total.toFixed(2)
+  );
+</script>
+</body>
+</html>

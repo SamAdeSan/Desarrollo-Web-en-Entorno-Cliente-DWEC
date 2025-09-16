@@ -1,0 +1,34 @@
+<!--
+3. Crear una página web que nos muestre el mensaje “Bienvenido a mi página” con
+formato H1, nos muestre la plataforma del navegador que estamos utilizando, y con la
+ventana de Confirm nos pida si queremos continuar. En caso de que así sea saldrá en
+pantalla el mensaje “continuamos…”
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio3</title>
+</head>
+<body>
+
+<h1>¡Bienvenido a mi página!</h1>
+
+<p id="plataforma"></p>
+
+<p id="resultado"></p>
+
+<script>
+  document.getElementById("resultado").innerHTML = "Estás utilizando" + navigator.platform;
+
+  let continuar = confirm("¿Quieres continuar?");
+
+  if (continuar) {
+    document.getElementById("resultado").innerHTML = "Continuamos...";
+  }else {
+    document.getElementById("resultado").innerHTML = "No se ha podido continuar!";
+  }
+
+</script>
+</body>
+</html>

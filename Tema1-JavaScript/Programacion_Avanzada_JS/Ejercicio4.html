@@ -1,0 +1,23 @@
+<!--
+4. Crear un programa que nos permita redimensionar la pantalla con el método resize a
+500x500 en caso de que sea Internet Explorer, si es otro navegador que salga el
+mensaje “Operación no permitida con este navegador”.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio4</title>
+</head>
+<body>
+<h2>Ejercicio4 - La web redimensionada</h2>
+<script>
+
+  if (navigator.userAgent.indexOf("MSIE") !== -1 || navigator.userAgent.indexOf("Trident") !== -1) {
+    window.resizeBy(500, 500)
+  }else {
+    document.write("¡No disponible redimensionar a 500x500 en este navegador!")
+  }
+</script>
+</body>
+</html>
