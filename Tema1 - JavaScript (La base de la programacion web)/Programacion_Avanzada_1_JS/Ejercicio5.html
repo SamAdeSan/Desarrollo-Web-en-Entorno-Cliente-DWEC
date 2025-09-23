@@ -15,15 +15,12 @@ fecha actual del sistema pero con el día y el mes en letra.
 <p id="resultado"></p>
 <script>
   function mostrarFecha() {
-    let dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+      // en fomato inglés
+    let dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
     let meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "septiembre", "octubre", "noviembre", "diciembre"];
-
     let fechaHoy = new Date();
-
     document.getElementById("resultado").innerHTML = dias[fechaHoy.getDay()] + ", " + fechaHoy.getDate() + " de " + meses[fechaHoy.getMonth()] + " de " + fechaHoy.getFullYear();
-
   }
-
 </script>
 </body>
 </html>
