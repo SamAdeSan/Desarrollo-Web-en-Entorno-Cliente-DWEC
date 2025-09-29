@@ -1,0 +1,45 @@
+<!--
+    Crear un caja de texto con un valor inicial de 0, y dos botones : Sumar e Inicializar. Cada
+    vez que pinchemos sobre el botón Sumar se irá incrementando el valor del campo de 10 en 10,
+    si pinchamos sobre el botón Inicializar el valor del campo pasará a ser 0.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 3</title>
+        <style>
+            input {
+                display: flex;
+                border-radius: 3px;
+                border: black solid 1px;
+                padding: 10px;
+                margin: 10px;
+                background: lightgray;
+                width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><label for="valorNum">Ejercicio 3 - Ir sumando de 10 en 10 en una caja de texto</label></h1>
+
+        <input type="text" id="valorNum" value="0" readonly>
+        <button id="inicializar">Reicializar</button>
+        <button id="suma">Sumar</button>
+    </body>
+    <script>
+        let suma = document.getElementById("suma");
+        let inicializar = document.getElementById("inicializar");
+        let valorNum = document.getElementById("valorNum");
+
+            inicializar.addEventListener("click", () => {
+            valorNum.value = 0;
+        })
+
+        suma.addEventListener("click", () => {
+            let num = parseInt(valorNum.value)
+            num += 10;
+            valorNum.value = num;
+        })
+    </script>
+</html>

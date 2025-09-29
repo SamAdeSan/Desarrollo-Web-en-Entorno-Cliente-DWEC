@@ -1,0 +1,41 @@
+<!--
+        Introduce un número del 1 al 10. Genera un número aleatoriamente, si el número
+    introducido en igual al generado que salga un mensaje felicitándonos y si no es así nos debe
+    avisar que hemos fallado.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 4</title>
+    </head>
+    <body>
+        <h1>Ejercicio 4 - Adivina el número del 1 al 10</h1>
+
+        <label for="numero">Número: </label>
+        <input type="text" id="numero" name="numero">
+
+        <button id="calcular">Calcular</button>
+
+        <p id="resultado"></p>
+    </body>
+    <script>
+        document.getElementById("calcular").addEventListener("click", function(){
+            let numeroAleatorio = Math.floor(Math.random() * 11);
+
+            let numeroUsuario = parseInt(document.getElementById("numero").value);
+
+            if (numeroUsuario){
+                if (numeroUsuario === numeroAleatorio){
+                    document.getElementById("resultado").innerHTML = "Has adivinado el número!"
+                }
+                else{
+                    document.getElementById("resultado").innerHTML = "No lo has adivinado!"
+                }
+            }
+            else{
+                document.getElementById("resultado").innerHTML = "No se puede!"
+            }
+        });
+    </script>
+</html>

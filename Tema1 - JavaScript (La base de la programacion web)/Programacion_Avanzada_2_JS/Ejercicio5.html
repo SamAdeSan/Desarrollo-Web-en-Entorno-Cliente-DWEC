@@ -1,0 +1,27 @@
+<!--Crea un documento que al cargarse nos muestre un mensaje de Bienvenida. Pasados 20-->
+<!--segundos nos debe abrir otro nuevo documento.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <h1>Ejercicio 5 - Aparecer un documeto al cabo de 20 seg</h1>
+    <p>Bienvenido!</p>
+    <p id="documento"></p>
+<script>
+    tiempo = 20;
+    let intervalo = setInterval(() => {
+        tiempo--;
+        console.log(tiempo);
+
+        if (tiempo === 0){
+            clearInterval(intervalo)
+            document.getElementById("documento").innerHTML = "<p>Hola que tal!</p>"
+        }
+
+    }, 1000);
+</script>
+</body>
+</html>
