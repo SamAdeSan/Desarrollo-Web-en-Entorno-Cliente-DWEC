@@ -1,0 +1,23 @@
+section ul{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    display: flex;
+    border: black solid 1px;
+}
+
+section ul li {
+    padding: 20px;
+}
+
+nav ol{
+    padding: 35px;
+    max-width: 2000px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}

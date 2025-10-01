@@ -1,8 +1,8 @@
 <!--
 
-3.- Crea una página HTML con un div con el texto “ Bienvenido a esta página de prueba de colores” que aparecerá inicialmente en blanco.
+3.- Crea una página HTML con un div con el texto “Bienvenido a esta página de prueba de colores” que aparecerá inicialmente en blanco.
 
-    La página contendrá tresbotones y al pinchar sobre ellos cambiará el fondo del div.
+    La página contendrá tres botones y al pinchar sobre ellos cambiará el fondo del div.
 
     * Azul: Cambiará el fondo de la pantalla a azul.
     * Verde: Cambiará el fondo de la pantalla a verde.
@@ -16,21 +16,21 @@
         <title>Ejercicio 3</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            header {
-                width: 100%;
+            h1 {
                 text-align: center;
             }
         </style>
     </head>
     <body>
         <div id="color">
-            <h1>Selector de cambio de fondo</h1>
+            <h1>Bienvenido a esta página de prueba de colores</h1>
         </div>
         <p>Seleccione uno de estos botones para cambiar el fondo según su color:</p>
-        <button onclick="cambiarFondo('dodgerblue')">Cambiar el fondo a azul</button>
-        <button onclick="cambiarFondo('green')">Cambiar el fondo a verde</button>
-        <button onclick="cambiarFondo('darkred')">Cambiar el fondo a rojo</button>
-        <button onclick="cambiarFondo()">Cambiar el fondo al original</button>
+
+        <button onclick="cambiarFondo('dodgerblue')">Azul</button>
+        <button onclick="cambiarFondo('green')">Verde</button>
+        <button onclick="cambiarFondo('darkred')">Rojo</button>
+        <button onclick="cambiarFondo('white')">Original</button>
     </body>
     <script>
         window.onload = function() {
@@ -39,7 +39,7 @@
     </script>
     <script>
         function cambiarFondo(color){
-            document.getElementById('color').innerHTML = document.body.style.backgroundColor = color;
+            document.getElementById('color').style.backgroundColor = color;
         }
     </script>
 </html>

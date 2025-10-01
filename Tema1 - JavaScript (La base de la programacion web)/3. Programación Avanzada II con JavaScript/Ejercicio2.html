@@ -13,7 +13,7 @@
             <label for="dni">DNI: </label>
             <input type="text" name="dni" id="dni">
 
-            <button onclick="textoVacio()">Enviar</button>
+            <input type="submit" onclick="return textoVacio()">
         </form>
     </body>
     <script>
@@ -22,7 +22,9 @@
 
             if(textoVacio == null || textoVacio.length === 0) {
                 alert("El DNI está vacío.\n\nPor favor reintroduzca su DNI.")
+                return false;
             }
+            else return true;
         }
     </script>
 </html>

@@ -1,0 +1,61 @@
+<!--
+
+4.- Crea una página HTML que contenga varias imágenes y enlaces. La página
+tendrá un botón con el texto “Número de Imágenes” y otro con el texto “Número de
+enlaces”. Al pinchar sobre el primer botón debe salir un mensaje con alert que nos
+diga el número total de imágenes que tiene la página y al pinchar sobre el segundo
+botón debe salir un mensaje con alert que nos diga el número total de enlaces.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 4</title>
+        <link rel="stylesheet" href="css/estiloGaleria.css">
+    </head>
+
+    <body>
+        <header style="text-align: center;">
+            <h1>Galería de fotos</h1>
+            <nav>
+                <ol>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Contenido</a></li>
+                    <li>Galería</li>
+                    <li><a href="#">Contacto</a></li>
+                </ol>
+            </nav>
+        </header>
+
+        <button id="btnImg">Número de Imágenes</button>
+        <p id="resImg"></p>
+
+        <button id="btnEnl">Número de enlaces</button>
+        <p id="resEnl"></p>
+
+        <section>
+            <ul>
+                <li><img src="img/ave1.png" alt="ave1" style="width: 300px; height: auto;"></li>
+                <li><img src="img/ave2.png" alt="ave2" style="width: 300px; height: auto;"></li>
+                <li><img src="img/ave3.png" alt="ave3" style="width: 300px; height: auto;"></li>
+                <li><img src="img/ave4.png" alt="ave4" style="width: 300px; height: auto;"></li>
+                <li><img src="img/ave5.png" alt="ave5" style="width: 300px; height: auto;"></li>
+                <li><img src="img/ave6.png" alt="ave6" style="width: 300px; height: auto;"></li>
+                <li><img src="img/ave7.png" alt="ave7" style="width: 300px; height: auto;"></li>
+                <li><img src="img/ave8.png" alt="ave8" style="width: 300px; height: auto;"></li>
+                <li><img src="img/ave9.png" alt="ave9" style="width: 300px; height: auto;"></li>
+                <li><img src="img/ave10.png" alt="ave10" style="width: 300px; height: auto;"></li>
+            </ul>
+        </section>
+    </body>
+    <script>
+        document.getElementById('btnImg').addEventListener('click', function(){
+            let img = document.getElementById('img');
+            document.querySelectorAll("img").length = img.length;
+        })
+
+        document.getElementById('btnEnl').addEventListener('click', function(){
+            document.querySelectorAll("a").length
+        })
+    </script>
+</html>

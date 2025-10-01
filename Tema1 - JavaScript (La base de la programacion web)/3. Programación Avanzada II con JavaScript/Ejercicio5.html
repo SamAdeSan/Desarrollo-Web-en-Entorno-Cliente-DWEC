@@ -11,17 +11,23 @@
     <p>Bienvenido!</p>
     <p id="documento"></p>
 <script>
-    tiempo = 20;
-    let intervalo = setInterval(() => {
-        tiempo--;
-        console.log(tiempo);
+    // tiempo = 20;
+    // let intervalo = setInterval(() => {
+    //     tiempo--;
+    //     console.log(tiempo);
+    //
+    //     if (tiempo === 0){
+    //         clearInterval(intervalo)
+    //         document.getElementById("documento").innerHTML = "<p>Hola que tal!</p>"
+    //     }
+    //
+    // }, 1000);
 
-        if (tiempo === 0){
-            clearInterval(intervalo)
-            document.getElementById("documento").innerHTML = "<p>Hola que tal!</p>"
-        }
+    setTimeout(tiempo, 20000);
 
-    }, 1000);
+    function tiempo() {
+        document.getElementById("documento").innerHTML = "Hola que tal!"
+    }
 </script>
 </body>
 </html>
