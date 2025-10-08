@@ -15,7 +15,7 @@ botón debe salir un mensaje con alert que nos diga el número total de enlaces.
     </head>
 
     <body>
-        <header style="text-align: center;">
+        <header>
             <h1>Galería de fotos</h1>
             <nav>
                 <ol>
@@ -35,27 +35,27 @@ botón debe salir un mensaje con alert que nos diga el número total de enlaces.
 
         <section>
             <ul>
-                <li><img src="img/ave1.png" alt="ave1" style="width: 300px; height: auto;"></li>
-                <li><img src="img/ave2.png" alt="ave2" style="width: 300px; height: auto;"></li>
-                <li><img src="img/ave3.png" alt="ave3" style="width: 300px; height: auto;"></li>
-                <li><img src="img/ave4.png" alt="ave4" style="width: 300px; height: auto;"></li>
-                <li><img src="img/ave5.png" alt="ave5" style="width: 300px; height: auto;"></li>
-                <li><img src="img/ave6.png" alt="ave6" style="width: 300px; height: auto;"></li>
-                <li><img src="img/ave7.png" alt="ave7" style="width: 300px; height: auto;"></li>
-                <li><img src="img/ave8.png" alt="ave8" style="width: 300px; height: auto;"></li>
-                <li><img src="img/ave9.png" alt="ave9" style="width: 300px; height: auto;"></li>
-                <li><img src="img/ave10.png" alt="ave10" style="width: 300px; height: auto;"></li>
+                <li><img src="img/ave1.png" alt="ave1"><p>Ave 1</p></li>
+                <li><img src="img/ave2.png" alt="ave2"><p>Ave 2</p></li>
+                <li><img src="img/ave3.png" alt="ave3"><p>Ave 3</p></li>
+                <li><img src="img/ave4.png" alt="ave4"><p>Ave 4</p></li>
+                <li><img src="img/ave5.png" alt="ave5"><p>Ave 5</p></li>
+                <li><img src="img/ave6.png" alt="ave6"><p>Ave 6</p></li>
+                <li><img src="img/ave7.png" alt="ave7"><p>Ave 7</p></li>
+                <li><img src="img/ave8.png" alt="ave8"><p>Ave 8</p></li>
+                <li><img src="img/ave9.png" alt="ave9"><p>Ave 9</p></li>
+                <li><img src="img/ave10.png" alt="ave10"><p>Ave 10</p></li>
             </ul>
         </section>
     </body>
     <script>
-        document.getElementById('btnImg').addEventListener('click', function(){
-            let img = document.getElementById('img');
-            document.querySelectorAll("img").length = img.length;
-        })
+        document.getElementById('btnImg').onclick = function () {
+            let totalImg = document.querySelectorAll('img').length;
+            alert('La página contiene ' + totalImg + ' imágenes.');
+        }
 
-        document.getElementById('btnEnl').addEventListener('click', function(){
-            document.querySelectorAll("a").length
-        })
+        document.getElementById('btnEnl').onclick = function () {
+            alert('La web contiene ' + document.querySelectorAll("a").length + ' enlaces')
+        }
     </script>
 </html>

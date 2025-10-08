@@ -11,33 +11,39 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Ejercicio 3</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            h1 {
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="color">
-            <h1>Bienvenido a esta página de prueba de colores</h1>
-        </div>
-        <p>Seleccione uno de estos botones para cambiar el fondo según su color:</p>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="color">
+    <h1 style="text-align: center;">Bienvenido a esta página de prueba de colores</h1>
+</div>
+<p>Seleccione uno de estos botones para cambiar el fondo del <strong>encabezado 1</strong> según su color:</p>
 
-        <button onclick="cambiarFondo('dodgerblue')">Azul</button>
-        <button onclick="cambiarFondo('green')">Verde</button>
-        <button onclick="cambiarFondo('darkred')">Rojo</button>
-        <button onclick="cambiarFondo('white')">Original</button>
-    </body>
-    <script>
-        window.onload = function cambiarFondo(color){
-            document.getElementById('color').style.backgroundColor = color;
+<button id="btnAzul">Azul</button>
+<button id="btnVerde">Verde</button>
+<button id="btnRojo">Rojo</button>
+<button id="btnOrigin">Original</button>
+</body>
+<script>
+    window.onload = () => {
+        document.getElementById("btnAzul").onclick = () => {
+            document.getElementById("color").style.backgroundColor = "dodgerblue";
         }
-    </script>
-    <script>
 
-    </script>
+        document.getElementById("btnVerde").onclick = () => {
+            document.getElementById("color").style.backgroundColor = "green";
+        }
+
+        document.getElementById("btnRojo").onclick = () => {
+            document.getElementById("color").style.backgroundColor = "red";
+        }
+
+        document.getElementById("btnOrigin").onclick = () => {
+            document.getElementById("color").style.backgroundColor = "white";
+        }
+    }
+</script>
 </html>
