@@ -60,8 +60,10 @@ utilizando esta propiedad.
                     if (leon.querySelector('ul')) return
 
                     let subL = document.createElement("ul");
-                    let s1 = document.createElement("li").textContent = "cachorro";
-                    let s2 = document.createElement("li").textContent = "adulto";
+                    let s1 = document.createElement("li")
+                    s1.textContent = "cachorro"
+                    let s2 = document.createElement("li")
+                    s2.textContent = "adulto"
                     subL.appendChild(s1);
                     subL.appendChild(s2);
                     leon.appendChild(subL);
