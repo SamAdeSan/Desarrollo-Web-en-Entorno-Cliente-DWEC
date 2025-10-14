@@ -1,0 +1,66 @@
+<!--
+3.- Crea un documento que contenga 3 párrafos y estos a su vez contengan cada uno al
+menos un enlace(puedes poner en un párrafo un enlace, en otro dos y en el último tres).
+El documento tendrá también tres botones :
+
+- Número de enlaces- Al pinchar sobre él nos mostrará el número total de enlaces que hay en todo el documento.
+- Referencia enlaces- Al pinchar sobre él nos mostrará la referencia de los enlaces que hay en todo el documento.1
+- Referencia enlaces por párrafo- Al pinchar sobre él nos mostrará la referencia de todos los enlaces que hay en cada párrafo del documento.
+
+Debes utilizar funciones DOM para el acceso a los nodos. Para visualizar los datos puedes
+utilizar alert o crear un div y visualizar los datos con innerHTML .
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ejercicio 3</title>
+    </head>
+    <body>
+        <h2>Ejercicio 3 - Números y referencias de enlaces, además de enlces con párrafos</h2>
+
+        <p>Este es el primer párrafo con un <a href="https://www.ejemplo1.com">enlace 1</a>.</p>
+        <p>Este es el segundo párrafo con dos <a href="https://www.ejemplo2.com">enlace 2</a> y <a href="https://www.ejemplo3.com">enlace 3</a>.</p>
+        <p>Este es el tercer párrafo con tres <a href="https://www.ejemplo4.com">enlace 4</a>, <a href="https://www.ejemplo5.com">enlace 5</a> y <a href="https://www.ejemplo6.com">enlace 6</a>.</p>
+        
+        <button id="mosNL">Número de enlaces</button>
+        <button id="mosRL">Referencia enlaces</button>
+        <button id="mosRP">Referencia enlaces por párrafo</button>
+
+        <div id="res"></div>
+    </body>
+    <script>
+        let resultado = document.getElementById('res')
+        
+        document.getElementById('mosNL').onclick = function() {
+            let enlaces = document.getElementsByTagName('a');
+            resultado.innerHTML = 'Número total de enlaces: ' + enlaces.length;
+        }
+
+        document.getElementById('mosRL').onclick = function() {
+            let enlaces = document.getElementsByTagName('a');
+            let referencias = 'Referencias de los enlaces:<br>';
+            for (let i = 0; i < enlaces.length; i++) {
+                referencias += enlaces[i].href + '<br>';
+            }
+            resultado.innerHTML = referencias;
+        }
+
+        document.getElementById('mosRP').onclick = function() {
+            const parrafos = document.getElementsByTagName('p');
+            let resultadoTexto = '';
+            for (let i = 0; i < parrafos.length; i++) {
+                const enlaces = parrafos[i].getElementsByTagName('a');
+                resultadoTexto += 'Párrafo ' + (i + 1) + ':<br>';
+                for (let j = 0; j < enlaces.length; j++) {
+                    resultadoTexto += enlaces[j].href + '<br>';
+                }
+                resultadoTexto += '<br>';
+            }
+            resultado.innerHTML = resultadoTexto;
+        }
+    </script>
+</html>

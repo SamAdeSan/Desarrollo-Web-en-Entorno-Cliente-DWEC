@@ -1,0 +1,37 @@
+<!--
+
+2.- Crear un caja de texto con un valor inicial de 0, y dos botones: Sumar e Inicializar. Cada
+vez que pinchemos sobre el botón Sumar se irá incrementando el valor del campo de 10 en
+10, si pinchamos sobre el botón Inicializar el valor del campo pasará a ser 0. Debes utilizar
+funciones de DOM para acceso al campo.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+    <label for="contador">
+        Contador:
+        <input type="text" id="contador" value="0" readonly>
+        <button id="sumar">Sumar</button>
+        <button id="inicializar">Inicializar</button>
+    </label>
+    </body>
+    <script>
+        window.onload = () => {
+            document.getElementById("sumar").onclick = () => {
+                let contador = document.getElementById("contador");
+                contador.value = parseInt(contador.value) + 10;
+            }
+            document.getElementById("inicializar").onclick = () => {
+                document.getElementById("contador").value = 0;
+            }
+        }
+    </script>
+</html>
