@@ -1,0 +1,34 @@
+<!--
+
+1.- Crea un formulario básico con el campo dni y el botón enviar. Si el usuario deja el campo
+dni vacio saldrá un alert con un mensaje indicándonos que el campo no tiene datos al pulsar
+el botón de enviar. Debes utilizar funciones de DOM para acceso al campo.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form id="formulario">
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni">
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+    <script>
+        window.onload = () => {
+            document.getElementById("formulario").onsubmit = (event) => {
+                let dni = document.getElementById("dni").value;
+                if (dni === "") {
+                    alert("El campo DNI no puede estar vacío.");
+                    event.preventDefault(); // Evita que el formulario se envíe si el campo está vacío.
+                } 
+            } 
+        }            
+    </script>
+</html>

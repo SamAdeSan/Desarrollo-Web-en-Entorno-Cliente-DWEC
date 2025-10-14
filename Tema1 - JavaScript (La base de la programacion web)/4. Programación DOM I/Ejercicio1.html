@@ -1,0 +1,70 @@
+<!--
+
+1.- Crear una página HTML con un párrafo inicial con el texto “Este es mi primer párrafo” y cuatro botones.
+
+    • Añadir párrafo: Añadirá el párrafo con el texto “Párrafo añadido” detrás del último párrafo creado.
+    • Insertar párrafo: Insertará el párrafo con el texto “Párrafo insertado” detrás del primer párrafo (“Este es mi primer párrafo”).
+    • Reemplazar párrafo: Cambiará el texto del segundo párrafo (el siguiente a “Este es mi primer párrafo”) por “Párrafo reemplazado”.
+    • Borrar párrafo: Eliminará el párrafo que haya detrás de “Este es mi primer párrafo”.
+    • Clonar div: Duplicará (clonará) toda la estructura div que tengamos creada en el momento que pinchemos el botón
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 1</title>
+        <script>
+            window.onload = function () {
+                let divisor = document.getElementById('divisor');
+
+                document.getElementById('btnA').onclick = function () {
+                    let parrafo = document.createElement("p");
+                    parrafo.textContent = "Animal nuevo";
+                    divisor.appendChild(parrafo);
+                }
+
+                document.getElementById('btnI').onclick = function () {
+                    let parrafo = document.createElement("p");
+                    parrafo.textContent = prompt("Inserta tú un animal nuevo");
+                    let items = divisor.querySelectorAll('p');
+                    if (items.length === 0){
+                        divisor.appendChild(parrafo);
+                    } else {
+                        let primero = items[1]
+                        divisor.insertBefore(parrafo, primero)
+                    }
+                }
+
+                document.getElementById('btnR').onclick = function () {
+                    let parrafos = divisor.querySelectorAll("p");
+                    if (parrafos.length >= 2){
+                        parrafos[1].textContent = "Animal reemplazado";
+                    }
+                }
+
+                document.getElementById('btnD').onclick = function () {
+                    let parrafos = divisor.querySelectorAll("p");
+                    if (parrafos.length >= 2){
+                        divisor.removeChild(parrafos[1]);
+                    }
+                }
+
+                document.getElementById('btnC').onclick = function () {
+                    document.body.appendChild(divisor.cloneNode(true));
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="divisor">
+            <p>Este es el primer párrafo </p>
+        </div>
+
+        <button id="btnA">Añadir párrafo</button>
+        <button id="btnI">Insertar párrafo</button>
+        <button id="btnR">Reemplazar párrafo</button>
+        <button id="btnD">Borrar párrafo</button>
+        <button id="btnC">Clonar div</button>
+    </body>
+</html>
