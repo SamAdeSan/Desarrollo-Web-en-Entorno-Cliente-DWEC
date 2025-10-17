@@ -1,38 +1,83 @@
-<!DOCTYPE html>
+<!--
+3.- Crea un documento que contenga 3 párrafos y estos a su vez contengan cada uno al
+menos un enlace(puedes poner en un párrafo un enlace, en otro dos y en el último tres).
+El documento tendrá también tres botones :
+
+- Número de enlaces- Al pinchar sobre él nos mostrará el número total de enlaces que hay en todo el documento.
+- Referencia enlaces- Al pinchar sobre él nos mostrará la referencia de los enlaces que hay en todo el documento.1
+- Referencia enlaces por párrafo- Al pinchar sobre él nos mostrará la referencia de todos los enlaces que hay en cada párrafo del documento.
+
+Debes utilizar funciones DOM para el acceso a los nodos. Para visualizar los datos puedes
+utilizar alert o crear un div y visualizar los datos con innerHTML .
+-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ejercicio 4</title>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ejercicio 3</title>
     </head>
     <body>
-        <h1>Ejercicio 4 - Adivina el número del 1 al 10</h1>
+        <h2>Ejercicio 3 - Números y referencias de enlaces, además de enlces con párrafos</h2>
 
-        <label for="numero">Número: </label>
-        <input type="text" id="numero" name="numero">
+        <p>Este es el primer párrafo con un <a href="https://www.ejemplo1.com">enlace 1</a>.</p>
+        <p>Este es el segundo párrafo con dos <a href="https://www.ejemplo2.com">enlace 2</a> y <a href="https://www.ejemplo3.com">enlace 3</a>.</p>
+        <p>Este es el tercer párrafo con tres <a href="https://www.ejemplo4.com">enlace 4</a>, <a href="https://www.ejemplo5.com">enlace 5</a> y <a href="https://www.ejemplo6.com">enlace 6</a>.</p>
+        
+        <button id="mosNL">Número de enlaces</button>
+        <button id="mosRL">Referencia enlaces</button>
+        <button id="mosRP">Referencia enlaces por párrafo</button>
+        <button id="pVerde">Párrafos verdes</button>
+        <button id="pOrigin">Párrafos al color original</button>
 
-        <button id="calcular">Calcular</button>
-
-        <p id="resultado"></p>
+        <div id="res"></div>
     </body>
     <script>
-        document.getElementById("calcular").addEventListener("click", function(){
-            let numeroAleatorio = Math.floor(Math.random() * 11);
+        let resultado = document.getElementById('res')
+        
+        document.getElementById('mosNL').onclick = function() {
+            let enlaces = document.getElementsByTagName('a');
+            resultado.innerHTML = 'Número total de enlaces: ' + enlaces.length;
+        }
 
-            let numeroUsuario = parseInt(document.getElementById("numero").value);
+        document.getElementById('mosRL').onclick = function() {
+            let enlaces = document.getElementsByTagName('a');
+            let referencias = 'Referencias de los enlaces:<br>';
+            for (let i = 0; i < enlaces.length; i++) {
+                referencias += enlaces[i].href + '<br>';
+            }
+            resultado.innerHTML = referencias;
+        }
 
-            if (numeroUsuario){
-                if (numeroUsuario === numeroAleatorio){
-                    document.getElementById("resultado").innerHTML = "Has adivinado el número!"
+        document.getElementById('mosRP').onclick = function() {
+            let parrafos = document.getElementsByTagName('p');
+            let resultadoTexto = '';
+            for (let i = 0; i < parrafos.length; i++) {
+                const enlaces = parrafos[i].getElementsByTagName('a');
+                resultadoTexto += 'Párrafo ' + (i + 1) + ':<br>';
+                for (let j = 0; j < enlaces.length; j++) {
+                    resultadoTexto += enlaces[j].href + '<br>';
                 }
-                else{
-                    document.getElementById("resultado").innerHTML = "No lo has adivinado!"
-                }
+                resultadoTexto += '<br>';
             }
-            else{
-                    document.getElementById("resultado").innerHTML = "No se puede!"
+            resultado.innerHTML = resultadoTexto;
+        }
+
+        document.getElementById('pVerde').onclick = function() {
+            let parrafos = document.getElementsByTagName('p');
+            for (let i = 0; i < parrafos.length; i++) {
+                parrafos[i].style.color = 'green';
             }
-        });
+        }
+
+        document.getElementById('pOrigin').onclick = function() {
+            let parrafos = document.getElementsByTagName('p');
+            for (let i = 0; i < parrafos.length; i++) {
+                parrafos[i].style.color = 'initial';
+            }
+        }
+
     </script>
 </html>
