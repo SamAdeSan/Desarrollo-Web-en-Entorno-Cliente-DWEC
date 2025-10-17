@@ -13,18 +13,7 @@ funciones de DOM para acceso al campo.
         <meta charset="UTF-8">
         <title>Ejercicio 2</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-
-    <label for="contador">
-        Contador:
-        <input type="text" id="contador" value="0" readonly>
-        <button id="sumar">Sumar</button>
-        <button id="inicializar">Inicializar</button>
-    </label>
-    </body>
-    <script>
-        window.onload = () => {
+        <script>
             document.getElementById("sumar").onclick = () => {
                 let contador = document.getElementById("contador");
                 contador.value = parseInt(contador.value) + 10;
@@ -32,6 +21,23 @@ funciones de DOM para acceso al campo.
             document.getElementById("inicializar").onclick = () => {
                 document.getElementById("contador").value = 0;
             }
+        </script>
+    </head>
+    <body>
+        <label for="contador">
+            Contador:
+            <input type="text" id="contador" value="0" readonly>
+            <button id="sumar">Sumar</button>
+            <button id="inicializar">Inicializar</button>
+        </label>
+    </body>
+    <script>
+        document.getElementById("sumar").onclick = () => {
+            let contador = document.getElementById("contador");
+            contador.value = parseInt(contador.value) + 10;
+        }
+        document.getElementById("inicializar").onclick = () => {
+            document.getElementById("contador").value = 0;
         }
     </script>
 </html>

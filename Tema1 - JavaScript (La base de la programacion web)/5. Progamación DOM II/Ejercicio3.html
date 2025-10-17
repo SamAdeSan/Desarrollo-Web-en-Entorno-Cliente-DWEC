@@ -50,7 +50,7 @@ utilizar alert o crear un div y visualizar los datos con innerHTML .
         }
 
         document.getElementById('mosRP').onclick = function() {
-            const parrafos = document.getElementsByTagName('p');
+            let parrafos = document.getElementsByTagName('p');
             let resultadoTexto = '';
             for (let i = 0; i < parrafos.length; i++) {
                 const enlaces = parrafos[i].getElementsByTagName('a');
