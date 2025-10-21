@@ -1,0 +1,28 @@
+<!--
+5º) Crea un formulario con un campo de texto que solo permita la introducción de
+números. Debéis utilizar el evento onKeypress y las propiedades keyCode y
+charCode para controlar que los valores introducidos sean correctos.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 5</title>
+    </head>
+    <body>
+        <h2>Ejercicio 5</h2>
+        <form id="formulario">
+            <label for="texto">Texto Numérico: </label>
+            <input type="text" id="texto" name="texto">
+            <input type="submit" id="enviar" value="Enviar">
+        </form>
+        <script type="text/javascript">
+            document.getElementById("formulario").texto.onkeypress = function (event) {
+                let charCode = event.charCode || event.keyCode;
+                if (charCode < 48 || charCode > 57) {
+                    event.preventDefault();
+                }
+            }
+        </script>
+    </body>
+</html>

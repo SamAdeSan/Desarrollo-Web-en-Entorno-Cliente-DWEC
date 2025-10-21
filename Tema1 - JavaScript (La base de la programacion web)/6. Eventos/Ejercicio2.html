@@ -1,0 +1,27 @@
+<!--
+2º) Haz el ejercicio anterior pero utilizando la estructura semántica para construir y
+llamar al evento.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 2</title>
+    </head>
+    <body>
+        <h2>Ejercicio 2</h2>
+        <div id="divisor" onmouseover="aumentarTamaño(this)" onmouseout="disminuirTamaño(this)">
+            <p>Pasa el ratón por aquí.</p>
+        </div>
+    </body>
+    <script>
+        let div = document.getElementById("divisor");
+        div.style.fontSize = "12pt";
+        function aumentarTamaño(elemento) {
+            elemento.style.fontSize = "16pt";
+        }
+        function disminuirTamaño(elemento) {
+            elemento.style.fontSize = "12pt";
+        }
+    </script>
+</html>

@@ -1,0 +1,34 @@
+<!--
+3º) Realiza el mismo ejercicio utilizando el objeto event para que en función del tipo
+de evento aumente o disminuya el tamaño de la letra.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 3</title>
+    </head>
+    <body>
+        <h2>Ejercicio 3</h2>
+        <div id="divisor" onmouseover="cambiarTamano()" onmouseout="cambiarTamano()">
+            <p>Pasa el ratón por aquí.</p>
+        </div>
+    </body>
+    <script>
+        let div = document.getElementById("divisor");
+        div.style.fontSize = "12pt";
+        div.onmouseover = (event) => {
+            cambiarTamano(event);
+        }
+        div.onmouseout = (event) => {
+            cambiarTamano(event);
+        }
+        function cambiarTamano(event) {
+            if (event.type === "mouseover") {
+                event.target.style.fontSize = "16pt";
+            } else if (event.type === "mouseout") {
+                event.target.style.fontSize = "12pt";
+            }
+        }
+    </script>
+</html>

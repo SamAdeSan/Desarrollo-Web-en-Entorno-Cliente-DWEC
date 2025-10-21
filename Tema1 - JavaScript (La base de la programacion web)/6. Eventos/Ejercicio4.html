@@ -1,0 +1,32 @@
+<!--
+4º) Por último realizamos el ejercicio con attachEvent y con addEventListener.
+Utiliza algún método o función para que sirva a la vez para Internet Explorer y para
+el resto de navegadores.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 4</title>
+    </head>
+    <body>
+        <h2>Ejercicio 4</h2>
+        <div id="divisor">
+            <p>Pasa el ratón por aquí.</p>
+        </div>
+    </body>
+    <script type="text/javascript">
+        let div = document.getElementById("divisor");
+        div.style.fontSize = "12pt";
+        div.addEventListener("mouseover", (event) => {
+            cambiarTamano(event);
+        })
+        function cambiarTamano (event) {
+            if (event.type === "mouseover") {
+                event.target.style.fontSize = "16pt";
+            } else if (event.type === "mouseout") {
+                event.target.style.fontSize = "12pt";
+            }
+        }
+    </script>
+</html>
