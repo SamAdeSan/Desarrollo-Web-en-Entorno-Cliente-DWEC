@@ -2,24 +2,29 @@
 2º) Haz el ejercicio anterior pero utilizando la estructura semántica para construir y
 llamar al evento.
 -->
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ejercicio 2</title>
-    </head>
-    <body>
-        <h2>Ejercicio 2</h2>
-        <a id="texto" onmouseover="aumentarTamaño(this)" onmouseout="disminuirTamaño(this)">Pasa el ratón por aquí.</a>
-    </body>
-    <script>
-        let div = document.getElementById("texto");
-        div.style.fontSize = "12pt";
-        function aumentarTamaño(elemento) {
-            elemento.style.fontSize = "16pt";
-        }
-        function disminuirTamaño(elemento) {
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+<h2>Ejercicio 2</h2>
+<a id="texto">Pasa el ratón por aquí.</a>
+</body>
+<script>
+    let div = document.getElementById("texto");
+    div.style.fontSize = "12pt";
+    div.onmouseover = function () {
+        aumentarTamaño(this);
+    }
+
+    function aumentarTamaño(elemento) {
+        elemento.style.fontSize = "16pt";
+        elemento.onmouseout = function () {
             elemento.style.fontSize = "12pt";
         }
-    </script>
+    }
+</script>
 </html>

@@ -19,7 +19,7 @@ charCode para controlar que los valores introducidos sean correctos.
         <script type="text/javascript">
             document.getElementById("formulario").texto.onkeypress = function (event) {
                 let charCode = event.charCode || event.keyCode;
-                if (charCode < 48 || charCode > 57) {
+                if (charCode) {
                     event.preventDefault();
                 }
             }

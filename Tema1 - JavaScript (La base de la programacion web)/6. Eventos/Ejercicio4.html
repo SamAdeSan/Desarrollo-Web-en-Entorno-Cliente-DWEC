@@ -17,14 +17,11 @@ el resto de navegadores.
         let div = document.getElementById("texto");
         div.style.fontSize = "12pt";
         div.addEventListener("mouseover", (event) => {
-            cambiarTamano(event);
-        })
-        function cambiarTamano (event) {
             if (event.type === "mouseover") {
                 event.target.style.fontSize = "16pt";
             } else if (event.type === "mouseout") {
                 event.target.style.fontSize = "12pt";
             }
-        }
+        })
     </script>
 </html>
