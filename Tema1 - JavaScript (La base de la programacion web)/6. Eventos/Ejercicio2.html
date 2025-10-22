@@ -10,12 +10,10 @@ llamar al evento.
     </head>
     <body>
         <h2>Ejercicio 2</h2>
-        <div id="divisor" onmouseover="aumentarTamaño(this)" onmouseout="disminuirTamaño(this)">
-            <p>Pasa el ratón por aquí.</p>
-        </div>
+        <a id="texto" onmouseover="aumentarTamaño(this)" onmouseout="disminuirTamaño(this)">Pasa el ratón por aquí.</a>
     </body>
     <script>
-        let div = document.getElementById("divisor");
+        let div = document.getElementById("texto");
         div.style.fontSize = "12pt";
         function aumentarTamaño(elemento) {
             elemento.style.fontSize = "16pt";

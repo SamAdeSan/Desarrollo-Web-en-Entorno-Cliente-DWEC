@@ -11,12 +11,10 @@ el resto de navegadores.
     </head>
     <body>
         <h2>Ejercicio 4</h2>
-        <div id="divisor">
-            <p>Pasa el ratón por aquí.</p>
-        </div>
+        <a id="texto">Pasa el ratón por aquí.</a>
     </body>
     <script type="text/javascript">
-        let div = document.getElementById("divisor");
+        let div = document.getElementById("texto");
         div.style.fontSize = "12pt";
         div.addEventListener("mouseover", (event) => {
             cambiarTamano(event);

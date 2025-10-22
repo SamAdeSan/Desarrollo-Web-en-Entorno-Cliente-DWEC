@@ -1,3 +1,11 @@
+<!--
+7º) Siguiendo el ejemplo del tema 8 (punto 8.1-Relojes, contadores e intervalos de
+tiempo), crea una página que muestre el reloj creado. Además, debe aparecer
+inicialmente cuándo se cargue la página un mensaje (con alert) que nos diga
+“Página que contiene un reloj digital”, también controlaremos que sé si se
+abandona la página(por ejemplo volviendo al home) debe aparecer un mensaje (con
+alert) con el mensaje “Página cancelada”.
+-->
 <!DOCTYPE html>
 <html lang="en" xmlns="">
     <head>
@@ -6,9 +14,17 @@
     </head>
     <body>
         <h2>Ejercicio 7</h2>
-
+        <div id="reloj"></div>
     </body>
-    <script>
-
+    <script type="text/javascript">
+        let fechaHora = document.getElementById("reloj")
+        setInterval(() => {
+            let fecha = new Date();
+            let horas = String(fecha.getHours()).padStart(2, '0');
+            let minutos = String(fecha.getMinutes()).padStart(2, '0');
+            let segundos = String(fecha.getSeconds()).padStart(2, '0');
+            
+            fechaHora.innerHTML = horas + ":" + minutos + ":" + segundos;
+        });
     </script>
 </html>

@@ -1,3 +1,10 @@
+<!--
+6º) Crear una página con varios botones para que cada vez que se pulse en uno de
+ellos salga el mensaje “Has pulsado sobre un botón”(no sabemos el número de
+botones que puede haber, no se puede hacer de forma estática poniendo cada uno
+los botones que quiera y su onclick, sino que hay que hacerlo para cualquier
+página).
+-->
 <!DOCTYPE html>
 <html lang="en" xmlns="">
     <head>
@@ -6,9 +13,18 @@
     </head>
     <body>
         <h2>Ejercicio 6</h2>
-
+        <div id="botones">
+            <button id="btn1">Botón 1</button>
+            <button id="btn2">Botón 2</button>
+            <button id="btn3">Botón 3</button>
+        </div>
     </body>
-    <script>
-
+    <script type="text/javascript">
+        let botones = document.getElementById('botones');
+        botones.onclick = event => {
+            alert("Ha pulsado un botón")
+            event.preventDefault();
+            event.stopPropagation();
+        }
     </script>
 </html>
