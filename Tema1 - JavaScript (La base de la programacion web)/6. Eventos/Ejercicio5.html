@@ -14,15 +14,7 @@ charCode para controlar que los valores introducidos sean correctos.
         <form id="formulario">
             <label for="texto">Texto Numérico: </label>
             <input type="text" id="texto" name="texto">
-            <input type="submit" id="enviar" value="Enviar">
         </form>
-        <script type="text/javascript">
-            document.getElementById("formulario").texto.onkeypress = function (event) {
-                let charCode = event.charCode || event.keyCode;
-                if (charCode) {
-                    event.preventDefault();
-                }
-            }
-        </script>
+        <script type="text/javascript" src="js/Ejercicio5.js"></script>
     </body>
 </html>

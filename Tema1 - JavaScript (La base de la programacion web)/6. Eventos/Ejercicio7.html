@@ -16,15 +16,5 @@ alert) con el mensaje “Página cancelada”.
         <h2>Ejercicio 7</h2>
         <div id="reloj"></div>
     </body>
-    <script type="text/javascript">
-        let fechaHora = document.getElementById("reloj")
-        setInterval(() => {
-            let fecha = new Date();
-            let horas = String(fecha.getHours()).padStart(2, '0');
-            let minutos = String(fecha.getMinutes()).padStart(2, '0');
-            let segundos = String(fecha.getSeconds()).padStart(2, '0');
-            
-            fechaHora.innerHTML = horas + ":" + minutos + ":" + segundos;
-        });
-    </script>
+    <script type="text/javascript" src="js/Ejercicio7.js"></script>
 </html>

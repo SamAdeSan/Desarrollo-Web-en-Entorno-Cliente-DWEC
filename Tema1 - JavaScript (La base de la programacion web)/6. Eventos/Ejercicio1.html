@@ -14,16 +14,9 @@ el ejercicio utilizando funciones externas y “this”.
 </head>
 <body>
 <h2>Ejercicio 2</h2>
-<a id="texto" onmouseover="aumentarTamaño(this)" onmouseout="disminuirTamaño(this)">Pasa el ratón por aquí.</a>
+<a id="texto" onmouseover="aumentarTamano(this)" onmouseout="disminuirTamano(this)">Pasa el ratón por aquí.</a>
 </body>
-<script>
-    let div = document.getElementById("texto");
-    div.style.fontSize = "12pt";
-    function aumentarTamaño(elemento) {
-        elemento.style.fontSize = "16pt";
-    }
-    function disminuirTamaño(elemento) {
-        elemento.style.fontSize = "12pt";
-    }
+<script type="text/javascript" src="js/Ejercicio1.js">
+
 </script>
 </html>

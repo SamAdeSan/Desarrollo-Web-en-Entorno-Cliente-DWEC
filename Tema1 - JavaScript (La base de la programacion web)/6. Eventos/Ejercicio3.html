@@ -10,23 +10,9 @@ de evento aumente o disminuya el tamaño de la letra.
     </head>
     <body>
         <h2>Ejercicio 3</h2>
-        <a id="texto" onmouseover="cambiarTamano()" onmouseout="cambiarTamano()">Pasa el ratón por aquí.</a>
+        <div id="texto" onmouseover="cambiarTamano()" onmouseout="cambiarTamano()">Pasa el ratón por aquí.</div>
     </body>
     <script>
-        let div = document.getElementById("texto");
-        div.style.fontSize = "12pt";
-        div.onmouseover = (event) => {
-            cambiarTamano(event);
-        }
-        div.onmouseout = (event) => {
-            cambiarTamano(event);
-        }
-        function cambiarTamano(event) {
-            if (event.type === "mouseover") {
-                event.target.style.fontSize = "16pt";
-            } else if (event.type === "mouseout") {
-                event.target.style.fontSize = "12pt";
-            }
-        }
+
     </script>
 </html>

@@ -11,17 +11,7 @@ el resto de navegadores.
     </head>
     <body>
         <h2>Ejercicio 4</h2>
-        <a id="texto">Pasa el ratón por aquí.</a>
+        <div id="texto">Pasa el ratón por aquí.</div>
     </body>
-    <script type="text/javascript">
-        let div = document.getElementById("texto");
-        div.style.fontSize = "12pt";
-        div.addEventListener("mouseover", (event) => {
-            if (event.type === "mouseover") {
-                event.target.style.fontSize = "16pt";
-            } else if (event.type === "mouseout") {
-                event.target.style.fontSize = "12pt";
-            }
-        })
-    </script>
+    <script type="text/javascript" src="js/Ejercicio4.js"></script>
 </html>
