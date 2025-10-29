@@ -2,32 +2,17 @@
 <!--segundos nos debe abrir otro nuevo documento.-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ejercicio 5</title>
-</head>
-<body>
-    <h1>Ejercicio 5 - Aparecer un documento al cabo de 20 seg</h1>
-    <p>¡Bienvenido!</p>
-    <p id="documento"></p>
-<script>
-    // tiempo = 20;
-    // let intervalo = setInterval(() => {
-    //     tiempo--;
-    //     console.log(tiempo);
-    //
-    //     if (tiempo === 0){
-    //         clearInterval(intervalo)
-    //         document.getElementById("documento").innerHTML = "<p>Hola que tal!</p>"
-    //     }
-    //
-    // }, 1000);
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 5</title>
+        <link rel="stylesheet" href="../estiloEjercicios.css">
+    </head>
+    <body>
+        <h2><code>Ejercicio 5</code> - Aparecer un documento al cabo de 20 segundos.</h2>
 
-    setTimeout(tiempo, 20000);
-
-    function tiempo() {
-        document.getElementById("documento").innerHTML = "Hola que tal!"
-    }
-</script>
-</body>
+        <p>¡Bienvenido!</p>
+        <p id="documento"></p>
+    </body>
+    <script type="text/javascript" src="js/Ejercicio5.js"></script>
 </html>

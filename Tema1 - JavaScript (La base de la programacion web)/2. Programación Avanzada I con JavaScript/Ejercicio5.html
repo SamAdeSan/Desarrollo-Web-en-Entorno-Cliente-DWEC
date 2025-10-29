@@ -3,24 +3,20 @@
 fecha actual del sistema pero con el día y el mes en letra.
 -->
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ejercicio5</title>
-</head>
-<body>
-<h1>Ejercicio 5 - Fecha Actual</h1>
-<h4>Resultado de la fecha actual del usuario</h4>
-<button onclick="mostrarFecha()" style="margin: 10px; padding: 5px; background-color: dodgerblue; border-radius: 5px">Mostrar fecha actual</button>
-<p id="resultado"></p>
-<script>
-  function mostrarFecha() {
-      // en fomato inglés
-    let dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
-    let meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "septiembre", "octubre", "noviembre", "diciembre"];
-    let fechaHoy = new Date();
-    document.getElementById("resultado").innerHTML = dias[fechaHoy.getDay()] + ", " + fechaHoy.getDate() + " de " + meses[fechaHoy.getMonth()] + " de " + fechaHoy.getFullYear();
-  }
-</script>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 5</title>
+        <link rel="stylesheet" href="../estiloEjercicios.css">
+    </head>
+    <body>
+        <h2><code>Ejercicio 5</code> - Fecha Actual.</h2>
+
+        <h4>Resultado de la fecha actual del usuario</h4>
+
+        <button onclick="mostrarFecha()" style="margin: 10px; padding: 5px; background-color: dodgerblue; border-radius: 5px">Mostrar fecha actual</button>
+        <p id="resultado"></p>
+    </body>
+    <script type="text/javascript" src="js/Ejercicio5.js"></script>
 </html>

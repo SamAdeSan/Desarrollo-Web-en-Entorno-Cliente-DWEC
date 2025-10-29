@@ -1,22 +1,18 @@
 <!--
-4. Crear un programa que nos permita redimensionar la pantalla con el método resize a
-500x500 en caso de que sea Internet Explorer, si es otro navegador que salga el
-mensaje “Operación no permitida con este navegador”.
+    4. Crear un programa que nos permita redimensionar la pantalla con el método resize a
+    500x500 en caso de que sea Internet Explorer, si es otro navegador que salga el
+    mensaje “Operación no permitida con este navegador”.
 -->
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ejercicio4</title>
-</head>
-<body>
-<h2>Ejercicio 4 - La web redimensionada</h2>
-<script>
-  if (navigator.userAgent.indexOf("MSIE") !== -1 || navigator.userAgent.indexOf("Trident") !== -1) {
-    window.resizeBy(500, 500)
-  }else {
-    document.write("¡No disponible redimensionar a 500x500 en este navegador!")
-  }
-</script>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 4</title>
+        <link rel="stylesheet" href="../estiloEjercicios.css">
+    </head>
+    <body>
+        <h2><code>Ejercicio 4</code> - Redimensionar 500x500 según el navegador.</h2>
+    </body>
+    <script type="text/javascript" src="js/Ejercicio4.js"></script>
 </html>

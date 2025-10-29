@@ -7,39 +7,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Ejercicio 3</title>
-        <style>
-            input {
-                display: flex;
-                border-radius: 3px;
-                border: black solid 1px;
-                padding: 10px;
-                margin: 10px;
-                background: lightgray;
-                width: auto;
-            }
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 1</title>
+        <link rel="stylesheet" href="../estiloEjercicios.css">
     </head>
     <body>
-        <h1><label for="valorNum">Ejercicio 3 - Ir sumando de 10 en 10 en una caja de texto</label></h1>
-
+        <h2><label for="valorNum"><code>Ejercicio 1</code> - Ir sumando de 10 en 10 en una caja de texto.</label></h2>
         <input type="text" id="valorNum" value="0" readonly>
-        <button id="inicializar">Reicializar</button>
+        <button id="inicializar">Reinicializar</button>
         <button id="suma">Sumar</button>
     </body>
-    <script>
-        let suma = document.getElementById("suma");
-        let inicializar = document.getElementById("inicializar");
-        let valorNum = document.getElementById("valorNum");
-
-        inicializar.addEventListener("click", () => {
-            valorNum.value = 0;
-        })
-
-        suma.addEventListener("click", () => {
-            let num = parseInt(valorNum.value)
-            num += 10;
-            valorNum.value = num;
-        })
-    </script>
+    <script type="text/javascript" src="js/Ejercicio3.js"></script>
 </html>

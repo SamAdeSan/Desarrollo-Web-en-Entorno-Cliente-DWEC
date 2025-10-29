@@ -13,50 +13,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Ejercicio 1</title>
-        <script>
-            window.onload = function () {
-                let divisor = document.getElementById('divisor');
-
-                document.getElementById('btnA').onclick = function () {
-                    let parrafo = document.createElement("p");
-                    parrafo.textContent = "Animal nuevo";
-                    divisor.appendChild(parrafo);
-                }
-
-                document.getElementById('btnI').onclick = function () {
-                    let parrafo = document.createElement("p");
-                    parrafo.textContent = prompt("Inserta tú un animal nuevo");
-                    let items = divisor.querySelectorAll('p');
-                    if (items.length === 0){
-                        divisor.appendChild(parrafo);
-                    } else {
-                        let primero = items[1]
-                        divisor.insertBefore(parrafo, primero)
-                    }
-                }
-
-                document.getElementById('btnR').onclick = function () {
-                    let parrafos = divisor.querySelectorAll("p");
-                    if (parrafos.length >= 2){
-                        parrafos[1].textContent = "Animal reemplazado";
-                    }
-                }
-
-                document.getElementById('btnD').onclick = function () {
-                    let parrafos = divisor.querySelectorAll("p");
-                    if (parrafos.length >= 2){
-                        divisor.removeChild(parrafos[1]);
-                    }
-                }
-
-                document.getElementById('btnC').onclick = function () {
-                    document.body.appendChild(divisor.cloneNode(true));
-                }
-            }
-        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 4</title>
+        <link rel="stylesheet" href="../estiloEjercicios.css">
     </head>
     <body>
+        <h2><code>Ejercicio 1</code> - Botones de modificación de párrafos.</h2>
+
         <div id="divisor">
             <p>Este es el primer párrafo </p>
         </div>
@@ -67,4 +30,5 @@
         <button id="btnD">Borrar párrafo</button>
         <button id="btnC">Clonar div</button>
     </body>
+    <script type="text/javascript" src="js/Ejercicio1.js"></script>
 </html>

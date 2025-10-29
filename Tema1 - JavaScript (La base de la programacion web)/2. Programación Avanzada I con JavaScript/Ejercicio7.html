@@ -1,34 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ejercicio7</title>
-    <style>
-        button {
-            margin: 10px;
-            padding: 5px;
-            background-color: lightgrey;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-<h1>Selector de cambio de fondo</h1>
-<p>Seleccione uno de estos botones para cambiar el fondo según su color:</p>
-<button onclick="cambiarFondo('dodgerblue')" style="color: dodgerblue" >Cambiar el fondo a azul</button>
-<button onclick="cambiarFondo('green')" style="color: green">Cambiar el fondo a verde</button>
-<button onclick="cambiarFondo('darkred')" style="color: darkred">Cambiar el fondo a rojo</button>
-<button onclick="cambiarFondo()">Cambiar el fondo al original</button>
-<div id="resultado"></div>
-<script>
-    function cambiarFondo(color){
-        if (!color){
-            document.body.style.backgroundColor = "white";
-        }
-        else {
-            document.body.style.backgroundColor = color;
-        }
-    }
-</script>
-</body>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 7</title>
+        <link rel="stylesheet" href="../estiloEjercicios.css">
+    </head>
+    <body>
+        <h2><code>Ejercicio 7</code> - Selector de cambio de fondo.</h2>
+
+        <p>Seleccione uno de estos botones para cambiar el fondo según su color:</p>
+        <button onclick="cambiarFondo('dodgerblue')" style="color: #0083ff" >Cambiar el fondo a azul</button>
+        <button onclick="cambiarFondo('green')" style="color: green">Cambiar el fondo a verde</button>
+        <button onclick="cambiarFondo('darkred')" style="color: darkred">Cambiar el fondo a rojo</button>
+        <button onclick="cambiarFondo()">Cambiar el fondo al original</button>
+        <div id="resultado"></div>
+    </body>
+    <script type="text/javascript" src="js/Ejercicio7.js"></script>
 </html>

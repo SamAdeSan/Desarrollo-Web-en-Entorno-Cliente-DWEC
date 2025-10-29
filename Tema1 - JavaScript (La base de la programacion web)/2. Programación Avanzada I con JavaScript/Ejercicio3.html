@@ -1,32 +1,23 @@
 <!--
-3. Crear una página web que nos muestre el mensaje “Bienvenido a mi página” con
-formato H1, nos muestre la plataforma del navegador que estamos utilizando, y con la
-ventana de Confirm nos pida si queremos continuar. En caso de que así sea saldrá en
-pantalla el mensaje “continuamos…”
+    3. Crear una página web que nos muestre el mensaje “Bienvenido a mi página” con
+    formato H1, nos muestre la plataforma del navegador que estamos utilizando, y con la
+    ventana de Confirm nos pida si queremos continuar. En caso de que así sea saldrá en
+    pantalla el mensaje “continuamos…”
 -->
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ejercicio3</title>
-</head>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 3</title>
+        <link rel="stylesheet" href="../estiloEjercicios.css">
+    </head>
+    <body>
+        <h2><code>Ejercicio 2</code> - Introducir un mes y decir a qué estación pertenece. Con <code>switch</code></h2>
+        <h1>¡Bienvenido a mi página!</h1>
 
-<h1>¡Bienvenido a mi página!</h1>
-
-<p id="plataforma"></p>
-
-<p id="resultado"></p>
-
-<script>
-  document.getElementById("plataforma").innerHTML = "Estás utilizando: " + navigator.platform;
-
-  if (confirm("¿Quieres continuar?")) {
-    document.getElementById("resultado").innerHTML = "Continuamos...";
-  }else {
-    document.getElementById("resultado").innerHTML = "No se ha podido continuar!";
-  }
-
-</script>
-</body>
+        <p id="plataforma"></p>
+        <p id="resultado"></p>
+    </body>
+    <script type="text/javascript" src="js/Ejercicio3.js"></script>
 </html>

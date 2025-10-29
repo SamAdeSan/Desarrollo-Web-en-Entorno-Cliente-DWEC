@@ -15,35 +15,21 @@
     <meta charset="UTF-8">
     <title>Ejercicio 3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../estiloEjercicios.css">
 </head>
 <body>
-<div id="color">
-    <h1 style="text-align: center;">Bienvenido a esta página de prueba de colores</h1>
-</div>
-<p>Seleccione uno de estos botones para cambiar el fondo del <strong>encabezado 1</strong> según su color:</p>
+    <h1>4. Programación DOM I</h1>
+    <h2><code>Ejercicio 3</code> - Cambiar fondo <code>div</code>.</h2>
 
-<button id="btnAzul">Azul</button>
-<button id="btnVerde">Verde</button>
-<button id="btnRojo">Rojo</button>
-<button id="btnOrigin">Original</button>
+    <div id="color">
+        <h2 style="text-align: center;">Bienvenido a esta página de prueba de colores</h2>
+    </div>
+    <p>Seleccione uno de estos botones para cambiar el fondo del <strong>encabezado 1</strong> según su color:</p>
+
+    <button id="btnAzul">Azul</button>
+    <button id="btnVerde">Verde</button>
+    <button id="btnRojo">Rojo</button>
+    <button id="btnOrigin">Original</button>
 </body>
-<script>
-    window.onload = () => {
-        document.getElementById("btnAzul").onclick = () => {
-            document.getElementById("color").style.backgroundColor = "dodgerblue";
-        }
-
-        document.getElementById("btnVerde").onclick = () => {
-            document.getElementById("color").style.backgroundColor = "green";
-        }
-
-        document.getElementById("btnRojo").onclick = () => {
-            document.getElementById("color").style.backgroundColor = "red";
-        }
-
-        document.getElementById("btnOrigin").onclick = () => {
-            document.getElementById("color").style.backgroundColor = "white";
-        }
-    }
-</script>
+<script type="text/javascript" src="js/Ejercicio3.js"></script>
 </html>

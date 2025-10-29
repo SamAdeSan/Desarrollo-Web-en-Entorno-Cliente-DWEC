@@ -1,45 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ejercicio2</title>
-</head>
-<body>
-<script>
-  /*
-  2. Introducir un mes y decir a qué estación pertenece. Utilizar la estructura switch para resolver este ejercicio.
-  */
-
-  let mes = (prompt("Dime un mes: ").toLowerCase());
-  let epoca;
-
-  switch (mes) {
-      case "diciembre":
-      case "enero":
-      case "febrero":
-          epoca = "Es invierno.";
-          break;
-      case "marzo":
-      case "abril":
-      case "mayo":
-          epoca = "Es primavera";
-          break;
-      case "junio":
-      case "julio":
-      case "agosto":
-          epoca = "Es verano.";
-          break;
-      case "septiembre":
-      case "octubre":
-      case "noviembre":
-          epoca = prompt("Es otoño.");
-          break;
-      default:
-          epoca = "El valor introducido es erróneo"
-          break;
-  }
-  alert(epoca);
-
-</script>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 2</title>
+        <link rel="stylesheet" href="../estiloEjercicios.css">
+    </head>
+    <body>
+        <h2><code>Ejercicio 2</code> - Introducir un mes y decir a qué estación pertenece. Con <code>switch</code></h2>
+    </body>
+    <script type="text/javascript" src="js/Ejercicio2.js"></script>
 </html>

@@ -1,3 +1,4 @@
+/* Etiquetas */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #333333;
@@ -17,4 +18,27 @@ code {
     border-color: lightgray;
     border-style: solid;
     border-width: 1px;
+    box-shadow: 2px 2px 2px #888888;
+}
+
+form {
+    padding: 10px;
+    border-radius: 5px;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 2px 2px 2px #888888;
+}
+
+input {
+     border-radius: 3px;
+     border: black solid 1px;
+     padding: 6px;
+     margin: 5px;
+     background: lightgray;
+     width: auto;
+}
+
+label {
+    font-weight: bold;
 }

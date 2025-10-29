@@ -1,0 +1,30 @@
+/*
+    1. Introducir el precio de un artículo. Calcular el iva y el precio total(con el iva incluido) que
+    debe salir redondeado a dos decimales. Debéis utilizar una función.
+*/
+let iva, importeIVA, total;
+
+function calcularIVA(){
+    if (articulo < 100) {
+        iva = 1.21;
+    }else if (articulo >= 100 && articulo <= 1000) {
+        iva = 1.1;
+    }else if (articulo > 1000) {
+        iva = 1.04;
+    }
+    importeIVA = articulo * iva;
+    total = articulo + importeIVA;
+}
+
+function mostrarResultado(){
+    alert(
+        "Precio sin IVA: " + articulo.toFixed(2) +
+        "\nIVA: " + importeIVA.toFixed(2) +
+        "\nPrecio con IVA: " + total.toFixed(2)
+    );
+}
+
+let articulo = parseFloat(prompt("Introduce el precio del artículo"));
+
+calcularIVA();
+mostrarResultado();

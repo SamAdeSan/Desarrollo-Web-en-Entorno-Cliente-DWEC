@@ -1,5 +1,5 @@
 <!--
-        Introduce un número del 1 al 10. Genera un número aleatoriamente, si el número
+       4. Introduce un número del 1 al 10. Genera un número aleatoriamente, si el número
     introducido en igual al generado que salga un mensaje felicitándonos y si no es así nos debe
     avisar que hemos fallado.
 -->
@@ -7,35 +7,17 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejercicio 4</title>
+        <link rel="stylesheet" href="../estiloEjercicios.css">
     </head>
     <body>
-        <h1>Ejercicio 4 - Adivina el número del 1 al 10</h1>
+        <h2><code>Ejercicio 4</code> - Adivina el número del 1 al 10.</h2>
 
         <label for="numero">Número: </label>
         <input type="text" id="numero" name="numero">
-
-        <button id="calcular">Calcular</button>
-
+        <button id="adivinar">Adivinar</button>
         <p id="resultado"></p>
     </body>
-    <script>
-        document.getElementById("calcular").addEventListener("click", function(){
-            let numeroAleatorio = Math.floor(Math.random() * 11);
-
-            let numeroUsuario = parseInt(document.getElementById("numero").value);
-
-            if (numeroUsuario){
-                if (numeroUsuario === numeroAleatorio){
-                    document.getElementById("resultado").innerHTML = "Has adivinado el número!"
-                }
-                else{
-                    document.getElementById("resultado").innerHTML = "No lo has adivinado!"
-                }
-            }
-            else{
-                    document.getElementById("resultado").innerHTML = "No se puede!"
-            }
-        });
-    </script>
+    <script type="text/javascript" src="js/Ejercicio4.js"></script>
 </html>

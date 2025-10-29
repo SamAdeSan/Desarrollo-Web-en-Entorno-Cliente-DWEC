@@ -1,38 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ejercicio8</title>
-</head>
-<body>
-<h1>Datos de la página web</h1>
-<p>Dale al botón para mostrar datos de la página web</p>
-<button onclick="mostrarDatosPagina()" >Mostrar datos</button>
-<p id="resultado"></p>
-<script>
-    function irGoogle(){
-        window.open("https://www.google.com/");
-    }
-    function mostrarDatosPagina(){
-        document.getElementById("resultado").innerHTML = (`
-<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Ejercicio8</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 8</title>
+        <link rel="stylesheet" href="../estiloEjercicios.css">
     </head>
     <body>
-        <h2>Resultados de los datos</h2>
-        <ul>
-            <li>Url de la web <pre>${location.href}</pre></li>
-            <li>Pathname de la página: <pre>${location.pathname}</pre></li>
-            <li>Protocolo de la web: <pre>${location.protocol}</pre></li>
-            <li><button onclick="irGoogle()">Ir a Google</button></li>
-        </ul>
+        <h2><code>Ejercicio 8</code> - Datos de la página web.</h2>
+
+        <p>Dale al botón para mostrar datos de la página web</p>
+        <button onclick="mostrarDatosPagina()" >Mostrar datos</button>
+        <p id="resultado"></p>
     </body>
-</html>
-            `);
-    }
-</script>
-</body>
+    <script type="text/javascript" src="js/Ejercicio8.js"></script>
 </html>
