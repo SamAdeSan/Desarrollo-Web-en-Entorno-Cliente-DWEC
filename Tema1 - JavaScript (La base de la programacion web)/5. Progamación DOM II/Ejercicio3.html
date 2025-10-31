@@ -18,9 +18,10 @@ utilizar alert o crear un div y visualizar los datos con innerHTML .
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Ejercicio 3</title>
+        <link rel="stylesheet" href="../estiloEjercicios.css">
     </head>
     <body>
-        <h2>Ejercicio 3 - Números y referencias de enlaces, además de enlaces con párrafos</h2>
+        <h2><code>Ejercicio 3</code> - Números y referencias de enlaces, además de enlaces con párrafos</h2>
 
         <p>Este es el primer párrafo con un <a href="https://www.ejemplo1.com">Enlace 1</a>.</p>
         <p>Este es el segundo párrafo con dos <a href="https://www.ejemplo2.com">Enlace 2</a> y <a href="https://www.ejemplo3.com">enlace 3</a>.</p>
@@ -32,35 +33,5 @@ utilizar alert o crear un div y visualizar los datos con innerHTML .
 
         <div id="res"></div>
     </body>
-    <script>
-        let resultado = document.getElementById('res')
-        
-        document.getElementById('mosNL').onclick = function() {
-            let enlaces = document.getElementsByTagName('a');
-            resultado.innerHTML = 'Número total de enlaces: ' + enlaces.length;
-        }
-
-        document.getElementById('mosRL').onclick = function() {
-            let enlaces = document.getElementsByTagName('a');
-            let referencias = 'Referencias de los enlaces:<br>';
-            for (let i = 0; i < enlaces.length; i++) {
-                referencias += enlaces[i].href + '<br>';
-            }
-            resultado.innerHTML = referencias;
-        }
-
-        document.getElementById('mosRP').onclick = function() {
-            let parrafos = document.getElementsByTagName('p');
-            let resultadoTexto = '';
-            for (let i = 0; i < parrafos.length; i++) {
-                const enlaces = parrafos[i].getElementsByTagName('a');
-                resultadoTexto += 'Párrafo ' + (i + 1) + ':<br>';
-                for (let j = 0; j < enlaces.length; j++) {
-                    resultadoTexto += enlaces[j].href + '<br>';
-                }
-                resultadoTexto += '<br>';
-            }
-            resultado.innerHTML = resultadoTexto;
-        }
-    </script>
+    <script type="text/javascript" src="js/Ejercicio3.js"></script>
 </html>

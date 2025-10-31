@@ -12,24 +12,15 @@ el botón de enviar. Debes utilizar funciones de DOM para acceso al campo.
         <meta charset="UTF-8">
         <title>Ejercicio 1</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../estiloEjercicios.css">
     </head>
     <body>
-    <h2>Ejercicio 1 - Formulario de campo vacío</h2>
+    <h2><code>Ejercicio 1</code> - Formulario de campo vacío</h2>
         <form id="formulario">
             <label for="dni">DNI:</label>
             <input type="text" id="dni" name="dni">
             <button type="submit">Enviar</button>
         </form>
     </body>
-    <script>
-        window.onload = () => {
-            document.getElementById("formulario").onsubmit = (event) => {
-                let dni = document.getElementById("dni").value;
-                if (dni === "") {
-                    alert("El campo DNI no puede estar vacío.");
-                    event.preventDefault(); // Evita que el formulario se envíe si el campo está vacío.
-                } 
-            } 
-        }            
-    </script>
+    <script type="text/javascript" src="js/Ejercicio1.js"></script>
 </html>

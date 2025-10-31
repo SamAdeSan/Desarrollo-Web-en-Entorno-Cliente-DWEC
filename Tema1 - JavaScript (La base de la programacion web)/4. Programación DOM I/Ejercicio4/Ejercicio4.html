@@ -12,11 +12,12 @@ botón debe salir un mensaje con alert que nos diga el número total de enlaces.
         <meta charset="UTF-8">
         <title>Ejercicio 4</title>
         <link rel="stylesheet" href="css/estiloGaleria.css">
+        <link rel="stylesheet" href="../../estiloEjercicios.css">
     </head>
 
     <body>
         <header>
-            <h1>Galería de fotos</h1>
+            <h1><code>Ejercicio 4</code> - Galería de fotos</h1>
             <nav>
                 <ol>
                     <li><a href="#">Inicio</a></li>
@@ -48,14 +49,5 @@ botón debe salir un mensaje con alert que nos diga el número total de enlaces.
             </ul>
         </section>
     </body>
-    <script>
-        document.getElementById('btnImg').onclick = function () {
-            let totalImg = document.querySelectorAll('img').length;
-            alert('La página contiene ' + totalImg + ' imágenes.');
-        }
-
-        document.getElementById('btnEnl').onclick = function () {
-            alert('La web contiene ' + document.querySelectorAll("a").length + ' enlaces')
-        }
-    </script>
+    <script type="text/javascript" src="../js/Ejercicio4.js"></script>
 </html>

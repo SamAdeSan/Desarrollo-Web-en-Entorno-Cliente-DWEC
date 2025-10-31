@@ -7,18 +7,17 @@
         <link rel="stylesheet" href="../estiloEjercicios.css">
     </head>
     <body>
-        <h2>Ejercicio 1 - Formulario con 3 campos (uno puede ser vacío)</h2>
-        <form id="formulario">
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre">
-
-            <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" id="apellido">
-
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-
-            <input type="submit" value="Enviar">
+        <h2><code>Ejercicio 1</code> - Formulario de 3 campos con campo no vacío obligatorio ().</h2>
+        <form>
+            <label for="nombre">Nombre:
+                <input type="text" placeholder="..." name="nombre" id="nombre">
+            </label>
+            <label for="apellido">Apellido:
+                <input type="text" placeholder="..." name="apellido" id="apellido">
+            </label>
+            <label for="email">Email:
+                <input type="email" placeholder="..." name="email" id="email">
+            </label>
         </form>
     </body>
     <script src="js/Ejercicio1.js"></script>
