@@ -4,23 +4,25 @@ body {
     background-color: #333333;
     padding: 10px;
     color: lightgray;
+    box-sizing: border-box;
 }
 h1 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 28pt;
 }
+
+#subtitulo {
+    text-align: center;
+}
+
 h2 {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15pt;
 }
 p {
-    font-family: Arial, Helvetica, sans-serif;
     padding: 2px;
     font-size: 11pt;
 }
 main {
-    font-family: Arial, Helvetica, sans-serif;
     background-color: lightgray;
     padding: 10px 15px;
     color: #333333;
@@ -28,7 +30,69 @@ main {
     border: 1px solid lightgray;
     border-radius: 2px;
     backdrop-filter: blur(5px);
+    width: 1700px;
 }
+
+.volver {
+    padding: 10px;
+    margin: 10px 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #333333;
+    background-color: #777777;
+    width: 60px;
+    text-align: center;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+}
+.volver:hover {
+     background-color: #4d4d4d;
+ }
+.anexos {
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.anexos ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.anexos ul li {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 260px;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.anexos ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.anexos ul li a:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+
 button {
     margin: 10px;
     padding: 5px;
@@ -75,8 +139,4 @@ input {
 
 div {
     width: 225px;
-}
-
-li p a {
-    color: black;
 }
