@@ -3,7 +3,9 @@ document.getElementById("formulario").onsubmit = (event) => {
     let apellido = document.getElementById("apellido").value;
     let email = document.getElementById("email").value;
 
-    if (nombre === "") {
+    if (nombre === "" && apellido === "" && email === "") {
+        alert("Los campos están vacíos");
+    } else if (nombre === "") {
         alert("El campo \"Nombre\" está vacío");
     } else if (apellido === "") {
         alert("El campo \"Apellido\" está vacío");

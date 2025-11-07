@@ -129,12 +129,12 @@ label {
 }
 
 input {
-     border-radius: 3px;
-     border: black solid 1px;
-     padding: 6px;
-     margin: 5px;
-     background: lightgray;
-     width: auto;
+    border-radius: 3px;
+    border: black solid 1px;
+    padding: 6px;
+    margin: 5px;
+    background: lightgray;
+    width: auto;
 }
 
 div {
