@@ -27,4 +27,7 @@ document.getElementById("formulario").onsubmit = (event) => {
     //     alert("El campo \"Email\" está vacío");
     // }
     // event.preventDefault();
+    document.getElementById("resultado").onclick = (event) => {
+        event.preventDefault();
+    }
 }

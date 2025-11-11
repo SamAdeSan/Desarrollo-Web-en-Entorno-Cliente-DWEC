@@ -12,5 +12,5 @@ document.getElementById("formulario").onsubmit = (event) => {
     } else if (email === "") {
         alert("El campo \"Email\" está vacío");
     }
-    event.preventDefault();
+    event.stopPropagation()
 }

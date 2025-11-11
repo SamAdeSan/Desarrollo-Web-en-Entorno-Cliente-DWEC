@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ejercicio 1</title>
-    <link rel="stylesheet" href="../../estiloEjercicios.css">
-</head>
-<body>
-<h2><code>Ejercicio 1</code> - Formulario con los campos correspondientes.</h2>
-<form id="formulario">
-    <label for="nombre">Nombre:
-        <input type="text" placeholder="..." name="nombre" id="nombre">
-    </label>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ejercicio 1</title>
+        <link rel="stylesheet" href="../../estiloEjercicios.css">
+    </head>
+    <body>
+        <h2><code>Ejercicio 1</code> - Formulario con los campos correspondientes.</h2>
+        <form id="formulario">
+            <label for="nombre">Nombre:
+                <input type="text" placeholder="..." name="nombre" id="nombre">
+            </label>
 
-    <label for="apellido">Apellido:
-        <input type="text" placeholder="..." name="apellido" id="apellido">
-    </label>
+            <label for="apellido">Apellido:
+                <input type="text" placeholder="..." name="apellido" id="apellido">
+            </label>
 
-    <label for="telefono">Telefono:
-        <input type="text" placeholder="..." name="telefono" id="telefono">
-    </label>
+            <label for="telefono">Telefono:
+                <input type="text" placeholder="..." name="telefono" id="telefono">
+            </label>
 
-    <label for="edad">Edad:
-        <input type="number" placeholder="..." name="edad" id="edad">
-    </label>
+            <label for="edad">Edad:
+                <input type="number" placeholder="..." name="edad" id="edad">
+            </label>
 
-    <label>Sexo: <br>
-        <input type="radio" value="hombre" name="hombre" id="sexo_h"/> Hombre <br>
-        <input type="radio" value="mujer" name="mujer" id="sexo_m"/> Mujer
-    </label>
+            <label>Sexo: <br>
+                <input type="radio" value="hombre" name="sexo" id="sexo_h"/> Hombre <br>
+                <input type="radio" value="mujer" name="sexo" id="sexo_m"/> Mujer
+            </label>
 
-    <label for="foto">Incluir mi foto:
-        <input type="file" name="foto" id="foto">
-    </label>
+            <label for="foto">Incluir mi foto:
+                <input type="file" name="foto" id="foto">
+            </label>
 
-    <label for="enviar_publicidad">Enviar Publicidad:
-        <input type="checkbox" name="enviarPublicidad" id="enviar_publicidad">
-    </label>
+            <label for="enviar_publicidad">Enviar Publicidad:
+                <input type="checkbox" name="enviarPublicidad" id="enviar_publicidad">
+            </label>
 
-    <label for="elegirAficionFav">Elige tu afición favorita:
-        <select id="elegirAficionFav" name="elegirAficionFav">
-            <option value="1">...</option>
-            <option value="2">musica</option>
-            <option value="3">deporte</option>
-            <option value="4">videojuegos</option>
-            <option value="4">fiesta</option>
-        </select>
-    </label>
-    <br><br>
+            <label for="elegirAficionFav">Elige tu afición favorita:
+                <select id="elegirAficionFav" name="elegirAficionFav">
+                    <option selected disabled></option>
+                    <option value="2">musica</option>
+                    <option value="3">deporte</option>
+                    <option value="4">videojuegos</option>
+                    <option value="4">fiesta</option>
+                </select>
+            </label>
+            <br><br>
 
-    <label for="observaciones">Observaciones: <br><br>
-        <textarea name="observaciones" placeholder="..." id="observaciones"></textarea>
-    </label>
+            <label for="observaciones">Observaciones: <br><br>
+                <textarea name="observaciones" placeholder="..." id="observaciones"></textarea>
+            </label>
 
-    <button type="submit">Guardar cambios</button>
-    <button type="reset">Borrar los datos introducidos</button>
-</form>
-</body>
-<script src="js/Ejercicio1.js"></script>
+            <button type="submit">Guardar cambios</button>
+            <button type="reset">Borrar los datos introducidos</button>
+        </form>
+    </body>
+    <script src="js/Ejercicio1.js"></script>
 </html>
