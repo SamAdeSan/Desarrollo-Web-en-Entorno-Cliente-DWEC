@@ -1,10 +1,21 @@
 /* Etiquetas */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #333333;
+    background:
+            linear-gradient(45deg,
+            #ababab,
+            #9c9c9c,
+            #4b4b4b,
+            #4b4b4b,
+            #939393,
+            #c0c0c0
+            )
+    ;
+    background-size: 400% 400%;
     padding: 10px;
     color: lightgray;
     box-sizing: border-box;
+    animation: continuousAnimation 30s ease infinite;
 }
 h1 {
     text-align: center;
@@ -139,4 +150,16 @@ input {
 
 div {
     width: 225px;
+}
+/* KEYFRAMES */
+@keyframes continuousAnimation {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
