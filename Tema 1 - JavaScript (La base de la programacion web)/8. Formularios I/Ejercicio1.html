@@ -17,6 +17,10 @@
                 <input type="text" placeholder="..." name="apellido" id="apellido">
             </label>
 
+            <label for="dni">DNI:
+                <input type="text" placeholder="ej: 12345678A" name="dni" id="dni">
+            </label>
+
             <label for="telefono">Telefono:
                 <input type="text" placeholder="..." name="telefono" id="telefono">
             </label>
@@ -26,8 +30,8 @@
             </label>
 
             <label>Sexo: <br>
-                <input type="radio" value="hombre" name="sexo" id="sexo_h"/> Hombre <br>
-                <input type="radio" value="mujer" name="sexo" id="sexo_m"/> Mujer
+                <input type="radio" value="hombre" name="sexo" /> Hombre <br>
+                <input type="radio" value="mujer" name="sexo" /> Mujer
             </label>
 
             <label for="foto">Incluir mi foto:
@@ -38,13 +42,12 @@
                 <input type="checkbox" name="enviarPublicidad" id="enviar_publicidad">
             </label>
 
-            <label for="elegirAficionFav">Elige tu afición favorita:
-                <select id="elegirAficionFav" name="elegirAficionFav">
+            <label for="aficiones">Elige tu afición favorita:
+                <select id="aficiones" name="aficiones">
                     <option selected disabled></option>
-                    <option value="2">musica</option>
-                    <option value="3">deporte</option>
-                    <option value="4">videojuegos</option>
-                    <option value="4">fiesta</option>
+                    <option>música</option>
+                    <option>lectura</option>
+                    <option>deporte</option>
                 </select>
             </label>
             <br><br>
@@ -53,8 +56,8 @@
                 <textarea name="observaciones" placeholder="..." id="observaciones"></textarea>
             </label>
 
-            <button type="submit">Guardar cambios</button>
-            <button type="reset">Borrar los datos introducidos</button>
+            <button type="submit" id="guardar">Guardar cambios</button>
+            <button type="reset" id="borrar">Borrar los datos introducidos</button>
         </form>
     </body>
     <script src="js/Ejercicio1.js"></script>
