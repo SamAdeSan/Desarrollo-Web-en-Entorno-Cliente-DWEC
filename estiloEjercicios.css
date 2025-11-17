@@ -3,19 +3,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background:
             linear-gradient(45deg,
-            #ababab,
-            #9c9c9c,
+            #939393 ,
             #4b4b4b,
-            #4b4b4b,
-            #939393,
-            #c0c0c0
+            #939393
             )
     ;
-    background-size: 400% 400%;
+    background-size: 7500% 7500%;
     padding: 10px;
     color: lightgray;
     box-sizing: border-box;
-    animation: continuousAnimation 30s ease infinite;
+    animation: continuousAnimation 45s ease infinite;
 }
 h1 {
     text-align: center;
@@ -151,6 +148,25 @@ input {
 div {
     width: 225px;
 }
+
+select {
+    border-radius: 3px;
+    border: black solid 1px;
+    padding: 4px;
+    margin: 5px;
+    background: lightgray;
+    width: auto;
+}
+
+/* Estilo de las opciones */
+select option {
+    color: lightgray;
+    background: gray;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 /* KEYFRAMES */
 @keyframes continuousAnimation {
     0% {
