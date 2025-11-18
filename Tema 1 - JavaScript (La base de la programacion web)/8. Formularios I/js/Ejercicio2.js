@@ -1,2 +1,3 @@
-let colorP = document.getElementById("cambiarColorAp")
-document.getElementById("colores").style.color = colorP.value
+document.querySelector('select[name="colores"]').addEventListener('change', function() {
+    document.getElementById('cambiarColorAp').style.color = this.value;
+});
