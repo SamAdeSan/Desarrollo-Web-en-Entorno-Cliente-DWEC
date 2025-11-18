@@ -26,6 +26,13 @@ h1 {
 h2 {
     font-size: 15pt;
 }
+
+.tituloConLineaDivisoria {
+    border-top: 1px solid gray;
+    padding-top: 10px;
+    width: auto;
+}
+
 p {
     padding: 2px;
     font-size: 11pt;
@@ -59,13 +66,13 @@ main {
 .volver:hover {
      background-color: #4d4d4d;
  }
-.anexos {
+.anexosYejercicios {
     width: 100%;
     max-width: 1200px;
     box-sizing: border-box;
 }
 
-.anexos ul {
+.anexosYejercicios ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -74,7 +81,7 @@ main {
     list-style-type: none;
 }
 
-.anexos ul li {
+.anexosYejercicios ul li {
     display: flex;
     justify-content: center;
     flex: 1 1 260px;
@@ -83,7 +90,7 @@ main {
     width: 100%;
 }
 
-.anexos ul li a {
+.anexosYejercicios ul li a {
     text-decoration: none;
     color: black;
     font-size: 15px;
@@ -96,10 +103,9 @@ main {
     text-align: center;
 }
 
-.anexos ul li a:hover {
+.anexosYejercicios ul li a:hover {
     background-color: rgba(0,0,0,0.1);
 }
-
 
 button {
     margin: 10px;
@@ -109,6 +115,16 @@ button {
 }
 code {
     background-color: #444444;
+    padding: 5px;
+    border-radius: 3px;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 2px 2px 2px #888888;
+}
+
+.code-AnexosTemas {
+    background: #a8a8a8;
     padding: 5px;
     border-radius: 3px;
     border-color: lightgray;
