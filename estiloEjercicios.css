@@ -24,15 +24,33 @@ h2 {
     font-size: 15pt;
 }
 
+h5 {
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 -0.5px rgba(128, 128, 128, 0.45), 0 0.5px rgba(128, 128, 128, 0.45);
+    padding: 10px;
+}
+
 .tituloConLineaDivisoria {
     border-top: 1px solid gray;
     padding-top: 10px;
     width: auto;
 }
 
+section {
+    p {
+        font-size: 10pt;
+    }
+    ul li {
+        font-size: 10pt;
+        line-height: 25px;
+    }
+}
+
 p {
     padding: 2px;
     font-size: 11pt;
+    line-height: 2em;
 }
 
 main {
@@ -47,6 +65,7 @@ main {
 }
 
 .volver {
+    display: inline-block;
     padding: 10px;
     margin: 10px 5px 10px;
     border-radius: 5px;
@@ -113,6 +132,46 @@ main {
 }
 
 .anexosYejercicios ul li a:hover {
+    background-color: rgba(0,0,0,0.1);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.anexosYejerciciosAside {
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+.anexosYejerciciosAside ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 2px;
+    margin: 4px auto;
+    max-width: 750px;
+    width: 100%;
+}
+
+.anexosYejerciciosAside ul li {
+    display: flex;
+    flex: 1 1 260px;
+    width: 100%;
+    margin: 2px;
+    padding: 4px;
+}
+
+.anexosYejerciciosAside ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 5px;
+    transition: background-color 250ms ease;
+}
+
+.anexosYejerciciosAside ul li a:hover {
     background-color: rgba(0,0,0,0.1);
     text-decoration: none;
     cursor: pointer;
