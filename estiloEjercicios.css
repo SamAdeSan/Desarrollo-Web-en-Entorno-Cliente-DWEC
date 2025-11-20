@@ -1,18 +1,15 @@
 /* Etiquetas */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background:
-            linear-gradient(45deg,
-            #939393 ,
-            #4b4b4b,
-            #939393
-            )
-    ;
-    background-size: 7500% 7500%;
-    padding: 10px;
+    background: #4b4b4b;
     color: lightgray;
     box-sizing: border-box;
-    animation: continuousAnimation 45s ease infinite;
+    margin: 0 10px;
+    padding: 0;
 }
 h1 {
     text-align: center;
@@ -37,6 +34,7 @@ p {
     padding: 2px;
     font-size: 11pt;
 }
+
 main {
     background-color: lightgray;
     padding: 10px 15px;
@@ -55,20 +53,25 @@ main {
     text-decoration: none;
     border: 1px solid #333333;
     background-color: #777777;
-    width: 60px;
+    width: fit-content;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     a {
         color: white;
         text-decoration: none;
     }
-
+    cursor: pointer;
+    transition: background-color 300ms ease;
 }
 .volver:hover {
-     background-color: #4d4d4d;
+    background-color: #4d4d4d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    box-sizing: content-box;
  }
 .anexosYejercicios {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     box-sizing: border-box;
 }
 
@@ -77,8 +80,11 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     list-style-type: none;
+    padding: 2px;
+    margin: 4px auto;
+    max-width: 750px;
+    width: 100%;
 }
 
 .anexosYejercicios ul li {
@@ -88,6 +94,8 @@ main {
     text-align: center;
     align-items: center;
     width: 100%;
+    margin: 2px;
+    padding: 4px;
 }
 
 .anexosYejercicios ul li a {
@@ -101,10 +109,48 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: background-color 250ms ease;
 }
 
 .anexosYejercicios ul li a:hover {
     background-color: rgba(0,0,0,0.1);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contenedor {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+.seccionPrincipal {
+    flex: 3;
+    box-sizing: border-box;
+    padding: 10px;
+    border-right: 1px solid #939393;
+    border-top: 1px solid #939393;
+}
+
+aside.menuDerecho {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 10px;
+    border-top: 1px solid #939393;
+}
+
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1f1f;
 }
 
 button {
@@ -113,6 +159,12 @@ button {
     background-color: #c3c3c3;
     border-radius: 5px;
 }
+
+button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
 code {
     background-color: #444444;
     padding: 5px;
@@ -133,13 +185,29 @@ code {
     box-shadow: 2px 2px 2px #888888;
 }
 
+fieldset {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px #333333;
+    legend {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 6px;
+        border: 1px solid lightgray;
+        border-top-color: #4b4b4b;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+    }
+}
+
 form {
     padding: 10px;
     border-radius: 5px;
     border-color: lightgray;
     border-style: solid;
     border-width: 1px;
-    box-shadow: 2px 2px 2px #888888;
+    box-shadow: 4px 4px 2px #333333;
     width: 600px;
 }
 
@@ -150,6 +218,8 @@ label {
     background-color: #525252;
     display: block;
     margin-bottom: 10px;
+    width: fit-content;
+    box-shadow: 4px 4px 2px #333333;
 }
 
 input {
@@ -159,10 +229,81 @@ input {
     margin: 5px;
     background: lightgray;
     width: auto;
+    box-shadow: 4px 4px 2px #333333;
+}
+
+input[type=text] {
+    padding: 5px;
+    border-radius: 5px;
+    border: black solid 1px;
+    margin: 5px;
+    background: lightgray;
+    width: auto;
+    box-shadow: 4px 4px 2px #333333;
+}
+
+input[type=submit] {
+    padding: 5px;
+    border-radius: 5px;
+    border: black solid 1px;
+    margin: 5px;
+    background: lightgray;
+    width: auto;
+    box-shadow: 2px 2px 2px #3c3c3c;
+}
+
+input[type=radio] {
+    padding: 5px;
+    border-radius: 5px;
+    border: black solid 1px;
+    margin: 5px;
+    background: lightgray;
+    width: auto;
+    box-shadow: 2px 2px 2px #333333;
+}
+
+input[type=file] {
+    padding: 5px;
+    border-radius: 5px;
+    border: black solid 1px;
+    margin: 5px;
+    background: lightgray;
+    width: auto;
+    box-shadow: 2px 2px 2px #333333;
+}
+
+input[type=number] {
+    padding: 5px;
+    border-radius: 5px;
+    border: black solid 1px;
+    margin: 5px;
+    background: lightgray;
+    width: auto;
+    box-shadow: 2px 2px 2px #333333;
+}
+
+input[type=checkbox] {
+    padding: 5px;
+    border-radius: 10px;
+    border: black solid 1px;
+    margin: 5px;
+    background: lightgray;
+    width: auto;
+    box-shadow: 2px 2px 2px #333333;
+}
+
+textarea {
+    border-radius: 3px;
+    border: black solid 1px;
+    padding: 6px;
+    margin: 5px;
+    background: lightgray;
+    width: auto;
+    box-shadow: 2px 2px 2px #333333;
 }
 
 div {
-    width: 225px;
+    width: fit-content;
 }
 
 select {
@@ -172,6 +313,7 @@ select {
     margin: 5px;
     background: lightgray;
     width: auto;
+    box-shadow: 2px 2px 2px #333333;
 }
 
 /* Estilo de las opciones */
@@ -181,17 +323,5 @@ select option {
     font-weight: bold;
     padding: 10px;
     border-radius: 5px;
-}
-
-/* KEYFRAMES */
-@keyframes continuousAnimation {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
+    box-shadow: 2px 2px 2px #333333;
 }
