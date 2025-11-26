@@ -256,6 +256,70 @@ code {
     box-shadow: 2px 2px 2px #888888;
 }
 
+.code-quote {
+    border-left: 4px solid #3a3a3a;
+    background: #1e1e1e;
+    padding: 12px 16px;
+    margin: 20px 0;
+    margin-right: 30px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 10pt;
+    font-style: italic;
+    color: #4b4b4b;
+}
+
+.code-quote pre {
+    font-style: normal;
+    margin: 12px;
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    font-size: 14px;
+    font-family: Consolas, "Courier New", monospace;
+    white-space: pre;
+}
+
+.code-quote pre code {
+    background: transparent;
+    color: #ffffff;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 11px;
+    line-height: 1.4;
+    border: none;
+    box-shadow: none;
+}
+
+.code-quote code .tag {
+    color: #569cd6;  /* azul medio */
+}
+
+.code-quote code .attr {
+    color: #c678dd;  /* morado suave */
+}
+
+.code-quote code .value {
+    color: #d19a66;  /* naranja claro */
+}
+
+.code-quote code .string {
+    color: #d19a66;  /* naranja claro */
+}
+
+.code-quote code .keyword {
+    color: #e06c75;  /* rosa claro */
+}
+
+.code-quote code .comment {
+    color: #98c379;  /* verde pastel */
+    font-style: italic;
+}
+
+.code-quote code .number {
+    color: #56b6c2;  /* celeste suave */
+}
+
+
 .seccionTeórica code {
     background: #cccccc;
     padding: 1px;
