@@ -1,31 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejemplo con Ajax para sacar Fichero de Texto </title>
-        <script type = "text/javascript">
-            var XMLHttpRequestObject = false;
-            if (window.XMLHttpRequest) {
-                XMLHttpRequestObject = new XMLHttpRequest();
-            } else if (window.ActiveXObject) {
-                XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            function sacardatos(datos, idDiv){
-                if(XMLHttpRequestObject) {
-                    var objeto = document.getElementById(idDiv);
-                    XMLHttpRequestObject.open("GET", datos);
-                    XMLHttpRequestObject.onreadystatechange = function(){
-                        if (XMLHttpRequestObject.readyState == 4 && XMLHttpRequestObject.status == 200) {
-                            objeto.innerHTML = XMLHttpRequestObject.responseText;
-                        }
-                    }
-                    XMLHttpRequestObject.send(null);
-                }
-            }
-        </script>
+        <meta name="description" content="¡Hola! Y bienvenido.">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <script type = "text/javascript" src="js/Ejercicio1.js"></script>
     </head>
     <body>
-        <H1>Mostrar Fichero de Texto en Ajax</H1>
+        <h1>Mostrar Fichero de Texto en Ajax</h1>
         <form>
-            <input type="button" value="Mostrar Fichero" onclick="sacardatos('datos.txt','contenedor')">
+            <input type="button" value="Mostrar Fichero" onclick="sacardatos('texto.txt','contenedor')">
         </form>
         <div id="contenedor" style="background-color:#99FF66;">
             <p> Mostrar&aacute; contenido del fichero </p>
