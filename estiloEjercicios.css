@@ -308,32 +308,27 @@ code {
 }
 
 .code-quote code .tag {
-    color: #569cd6;  /* azul medio */
+    color: #d3b46c;  /* azul medio */
 }
 
 .code-quote code .attr {
-    color: #c678dd;  /* morado suave */
+    color: #54a5f0;  /* morado suave */
 }
 
 .code-quote code .value {
-    color: #d19a66;  /* naranja claro */
+    color: #69a356;  /* naranja claro */
 }
 
 .code-quote code .string {
-    color: #d19a66;  /* naranja claro */
+    color: #c5673a;  /* naranja claro */
 }
 
 .code-quote code .keyword {
     color: #e06c75;  /* rosa claro */
 }
 
-.code-quote code .comment {
-    color: #98c379;  /* verde pastel */
-    font-style: italic;
-}
-
 .code-quote code .number {
-    color: #56b6c2;  /* celeste suave */
+    color: #227cb2;  /* celeste suave */
 }
 
 
