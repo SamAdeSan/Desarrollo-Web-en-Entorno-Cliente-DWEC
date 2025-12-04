@@ -308,27 +308,27 @@ code {
 }
 
 .code-quote code .tag {
-    color: #d3b46c;  /* azul medio */
+    color: #d3b46c;
 }
 
 .code-quote code .attr {
-    color: #54a5f0;  /* morado suave */
+    color: #00b7ff;
 }
 
 .code-quote code .value {
-    color: #69a356;  /* naranja claro */
-}
-
-.code-quote code .string {
-    color: #c5673a;  /* naranja claro */
+    color: #5da84b;
 }
 
 .code-quote code .keyword {
-    color: #e06c75;  /* rosa claro */
+    color: #e06f1f;
+}
+
+.code-quote code .string {
+    color: #b75e99;
 }
 
 .code-quote code .number {
-    color: #227cb2;  /* celeste suave */
+    color: #00ddff;
 }
 
 

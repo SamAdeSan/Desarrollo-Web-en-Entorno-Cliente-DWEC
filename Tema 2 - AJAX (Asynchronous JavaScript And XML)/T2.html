@@ -93,25 +93,25 @@
                     <pre><code class="code-pre">
 <span class="tag">&lt;html&gt;</span>
     <span class="tag">&lt;head&gt;</span>
-        <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="value">"UTF-8"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;meta</span> charset<span class="value">="UTF-8"</span><span class="tag">&gt;</span>
         <span class="tag">&lt;title&gt;</span>Ejemplo con Ajax<span class="tag">&lt;/title&gt;</span>
-        <span class="tag">&lt;script</span> <span class="attr">type</span>=<span class="value">"text/javascript"</span><span class="tag">&gt;</span>
-            <span class="keyword">var</span> XMLHttpRequestObject = <span class="keyword">false</span>
-            <span class="keyword">if</span> (window.XMLHttpRequest) {
-                XMLHttpRequestObject = <span class="keyword">new</span> XMLHttpRequest();
-            } <span class="keyword">else if</span> (window.ActiveXObject) {
-                XMLHttpRequestObject = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);
+        <span class="tag">&lt;script</span> type<span class="value">="text/javascript"</span><span class="tag">&gt;</span>
+            <span class="keyword">let</span> <span class="string">XMLHttpRequestObject</span> = <span class="keyword">false</span>
+            <span class="keyword">if</span> (<span class="string">window</span>.<span class="attr">XMLHttpRequest</span>) {
+                <span class="string">XMLHttpRequestObject</span> = <span class="keyword">new</span> <span class="attr">XMLHttpRequest</span>();
+            } <span class="keyword">else if</span> (<span class="string">window</span>.<span class="attr">ActiveXObject</span>) {
+                <span class="string">XMLHttpRequestObject</span> = <span class="keyword">new</span> <span class="attr">ActiveXObject</span>(<span class="value">"Microsoft.XMLHTTP"</span>);
 
-            <span class="keyword">function</span> sacardatos(datos, idDiv) {
-                <span class="keyword">if</span> (XMLHttpRequestObject) {
-                    <span class="keyword">var</span> objeto = document.getElementById(idDiv);
-                    XMLHttpRequestObject.open(<span class="string">"GET"</span>, datos);
-                    XMLHttpRequestObject.onreadystatechange = <span class="keyword">function</span>() {
-                        <span class="keyword">if</span> (XMLHttpRequestObject.readyState == 4 && XMLHttpRequestObject.status == 200) {
-                            objeto.innerHTML = XMLHttpRequestObject.responseText;
+            <span class="keyword">function</span> <span class="attr">sacardatos</span>(datos, idDiv) {
+                <span class="keyword">if</span> (<span class="string">XMLHttpRequestObject</span>) {
+                    <span class="keyword">let</span> objeto = <span class="string">document</span>.<span class="attr">getElementById</span>(idDiv);
+                    <span class="string">XMLHttpRequestObject</span>.<span class="attr">open</span>(<span class="value">"GET"</span>, datos);
+                    <span class="string">XMLHttpRequestObject</span>.<span class="attr">onreadystatechange</span> = <span class="keyword">function</span>() {
+                        <span class="keyword">if</span> (<span class="string">XMLHttpRequestObject</span>.<span class="attr">readyState</span> === <span class="number">4</span> && <span class="string">XMLHttpRequestObject</span>.<span class="attr">status</span> === <span class="number">200</span>) {
+                            objeto.<span class="string">innerHTML</span> = <span class="string">XMLHttpRequestObject</span>.<span class="string">responseText</span>;
                         }
 
-                    XMLHttpRequestObject.send(<span class="keyword">null</span>);
+                    <span class="string">XMLHttpRequestObject</span>.<span class="attr">send</span>(<span class="keyword">null</span>);
                 }
             }
         <span class="tag">&lt;/script&gt;</span>
@@ -119,9 +119,9 @@
     <span class="tag">&lt;body&gt;</span>
         <span class="tag">&lt;h1&gt;</span>Mostrar Fichero de Texto en Ajax<span class="tag">&lt;/h1&gt;</span>
         <span class="tag">&lt;form&gt;</span>
-            <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"button"</span> <span class="attr">value</span>=<span class="value">"Mostrar Fichero"</span> <span class="attr">onclick</span>=<span class="string">"sacardatos('datos.txt','contenedor')"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;input</span> type<span class="value">="button"</span> value<span class="value">="Mostrar Fichero"</span> onclick<span class="value">="</span><span class="attr">sacardatos</span>(<span class="value">'datos.txt'</span>,<span class="value">'contenedor'</span>)<span class="value">"</span><span class="tag">&gt;</span>
         <span class="tag">&lt;/form&gt;</span>
-        <span class="tag">&lt;div</span> <span class="attr">id</span>=<span class="value">"contenedor"</span> <span class="attr">style</span>=<span class="string">"background-color:#99FF66;"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> id<span class="value">="contenedor"</span> style<span class="value">="</span>background-color:<span class="attr">#99FF66</span>;<span class="value">"</span><span class="tag">&gt;</span>
             <span class="tag">&lt;p&gt;</span>Mostrará el contenido del fichero<span class="tag">&lt;/p&gt;</span>
         <span class="tag">&lt;/div&gt;</span>
     <span class="tag">&lt;/body&gt;</span>
