@@ -1,94 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introducción a AJAX</title>
-    <meta name="description" content="¡Hola! Y bienvenido.">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <link rel="stylesheet" href="../../estiloEjercicios.css">
-</head>
-<body>
-<div class="titulo">
-    <h1>Ejercicios del Módulo de DWEC</h1>
-</div>
-<main>
-    <h2><code class="code-AnexosTemas">Anexo 1</code> - Introducción a AJAX</h2>
-    <div class="contenedor">
-        <section class="seccionPrincipal">
-            <div class="anexosYejercicios">
-                <ul>
-                    <li><a href="Ejercicio1.html">Ejercicio 1 - Mostrar Fichero de Texto en Ajax</a></li>
-                    <li><a href="Ejercicio2.html">Ejercicio 2 - Calcular mayores que 8 en array</a></li>
-                    <li><a href="Ejercicio3.html">Ejercicio 3 - Calcular mayores que 8 en array</a></li>
-                    <li><a href="Ejercicio4.html">Ejercicio 4 - Calcular mayores que 8 en array</a></li>
-                    <li><a href="Ejercicio5.html">Ejercicio 5 - Calcular mayores que 8 en array</a></li>
-                    <li><a href="Ejercicio6.html">Ejercicio 6 - Cadena de texto modificada con parámetros diferentes.</a></li>
-                    <li><a href="Ejercicio7.html">Ejercicio 7 - Calcular mayores que 8 en array</a></li>
-                </ul>
-            </div> <!--contenidoAnexos-->
-            <section>
-                <h3 class="tituloConLineaDivisoria"><code class="code-AnexosTemas">*</code> - <u>Enunciados de los ejercicios</u> - <code class="code-AnexosTemas">*</code></h3>
-                <h4>Ejercicio 1 - Mostrar Fichero de Texto en Ajax</h4>
-                <p>Realizar un ejercicio similar al ejemplo guía para mostrar los datos de un fichero de texto.txt</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introducción a AJAX</title>
+        <meta name="description" content="¡Hola! Y bienvenido.">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <link rel="stylesheet" href="../../estiloEjercicios.css">
+    </head>
+    <body>
+        <div class="titulo">
+            <h1>Ejercicios del Módulo de DWEC</h1>
+        </div>
+        <main>
+            <h2><code class="code-AnexosTemas">Anexo 1</code> - Introducción a AJAX</h2>
+            <div class="contenedor">
+                <section class="seccionPrincipal">
+                    <div class="anexosYejercicios">
+                        <ul>
+                            <li><a href="Ejercicio1.html">Ejercicio 1 - Mostrar Fichero de Texto en Ajax</a></li>
+                            <li><a href="Ejercicio2/index.html">Ejercicio 2 - Cargar de forma asíncrona los enlaces pinchados</a></li>
+                            <li><a href="Ejercicio3.html">Ejercicio 3 - Cambio asíncrono de imagen con botón</a></li>
+                            <li><a href="Ejercicio4.html">Ejercicio 4 - Visualización asíncrona de un fichero XML</a></li>
+                            <li><a href="Ejercicio5.html">Ejercicio 5 - Ejecución dinámica de JavaScript externo con eval</a></li>
+                            <li><a href="Ejercicio6.html">Ejercicio 6 - Ejecución de programa PHP sin parámetros.</a></li>
+                            <li><a href="Ejercicio7.html">Ejercicio 7 - Ejecución de programa PHP con parámetros vía GET</a></li>
+                            <li><a href="Ejercicio8.html">Ejercicio 8 - Visualización asíncrona de fichero JSON</a></li>
+                            <li><a href="Ejercicio9.html">Ejercicio 9 - Indicador de carga AJAX con logo animado</a></li>
+                        </ul>
+                    </div> <!--contenidoAnexos-->
+                    <section>
+                        <h3 class="tituloConLineaDivisoria"><code class="code-AnexosTemas">*</code> - <u>Enunciados de los ejercicios</u> - <code class="code-AnexosTemas">*</code></h3>
+                        <h4>Ejercicio 1 - Mostrar Fichero de Texto en Ajax</h4>
+                        <p>Realizar un ejercicio similar al ejemplo guía para mostrar los datos de un fichero de texto.txt</p>
 
-                <h4>Ejercicio 2 - Cargar de forma asíncrona los enlaces pinchados</h4>
-                <p>
-                    Realizar un ejercicio con dos enlaces a dos páginas web para que cada vez que se pinche
-                    en uno de los enlaces se cargue la página correspondiente de forma asíncrona. Las paginas
-                    html deben estar alojadas en el mismo lugar que la principal. No deben tener cabecera HTML,
-                    HEAD, TITLE ya que se incluyen como contenido dentro de otra página web.
-                    En este ejemplo que os visualizo al pinchar sobre inicio sale la página de inicio.html, cuyo
-                    código es el siguiente:
-                <blockquote class="code-quote" style="width: fit-content;">
-                    html
-                    <pre><code class="code-pre">
-<span class="tag">&lt;h2</span> <span class="attr">class</span>="aligncenter">INICI&lt;/h2>
-    &lt;p class="aligncenter">
-        &lt;em>Zona de continguts&lt;/em>
-    &lt;/p></code></pre>
-                </blockquote>
-                </p>
+                        <h4>Ejercicio 2 - Cargar de forma asíncrona los enlaces pinchados</h4>
+                        <p>
+                            Realizar un ejercicio con dos enlaces a dos páginas web para que cada vez que se pinche
+                            en uno de los enlaces se cargue la página correspondiente de forma asíncrona. Las páginas
+                            html deben estar alojadas en el mismo lugar que la principal. No deben tener cabecera HTML,
+                            HEAD, TITLE ya que se incluyen como contenido dentro de otra página web.
+                            En este ejemplo que os visualizo al pinchar sobre inicio sale la página de <strong>inicio.html</strong>, cuyo
+                            código es el siguiente:</p>
+                        <blockquote class="code-quote" style="width: fit-content;">html<pre><code class="code-pre">
+<span class="tag">&lt;h2</span> class<span class="value">="aligncenter"</span><span class="tag">&gt;</span>INICI<span class="tag">&lt;/h2&gt;</span>
+    <span class="tag">&lt;p</span> class<span class="value">="aligncenter"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;em&gt;</span>Zona de continguts<span class="tag">&lt;/em&gt;</span>
+    <span class="tag">&lt;/p&gt;</span></code></pre>
+                        </blockquote>
 
-                <h4>Ejercicio 3 - </h4>
-                <p>Realizar una página web que contenga una imagen que se cambie por otra de forma asíncrona (por ejemplo al pinchar un botón “cambio de imagen” se debe producir el cambio).</p>
+                        <h4>Ejercicio 3 - Cambio asíncrono de imagen con botón.</h4>
+                        <p>Realizar una página web que contenga una imagen que se cambie por otra de forma asíncrona (por
+                            ejemplo al pinchar un botón “cambio de imagen” se debe producir el cambio).
+                        </p>
 
-                <h4>Ejercicio 4 - </h4>
-                <p></p>
+                        <h4>Ejercicio 4 - Visualización asíncrona de un fichero XML.</h4>
+                        <p>Realizar una página web que muestre el contenido de un fichero XML de forma asíncrona (por ejemplo
+                            al pinchar en un botón “Mostrar fichero XML” se debe mostrar el contenido)
+                        </p>
 
-                <h4>Ejercicio 5 - </h4>
-                <p></p>
+                        <h4>Ejercicio 5 - Ejecución dinámica de JavaScript externo con eval.</h4>
+                        <p>Realizar una página web que haga una llamada a un fichero JavaScript(extension .js) y ejecute la
+                            respuesta correctamente(utiliza la función eval).
+                        </p>
 
-                <h4>Ejercicio 6 - </h4>
-                <p></p>
+                        <h4>Ejercicio 6 - Ejecución de programa PHP sin parámetros.</h4>
+                        <p>Realiza una página web que ejecute el contenido de un programa que realizarás en php. El
+                            programa es libre, por ejemplo un programa para mostrar la fecha de sistema.(En este ejercicio
+                            no uses parámetros)
+                        </p>
 
-                <h4>Ejercicio 7 - </h4>
-                <p></p>
+                        <h4>Ejercicio 7 - Ejecución de programa PHP con parámetros vía GET.</h4>
+                        <p>Realiza una página web que ejecute el contenido de un programa que realizarás en php. El
+                            programa es libre, pero deber interactuar con los parámetros que le pasaremos con la orden
+                            GET.(En este ejercicio debes usar parámetros)
+                        </p>
 
-                <h4>Ejercicio 8 - </h4>
-                <p></p>
+                        <h4>Ejercicio 8 - Visualización asíncrona de fichero JSON.</h4>
+                        <p>Realiza una página web que muestre el contenido de un fichero JSON de forma
+                            asíncrona(por ejemplo al pinchar un botón “Mostrar fichero JSON” se debe mostrar el contenido).
+                        </p>
 
-                <h4>Ejercicio 9 - </h4>
-                <p></p>
+                        <h4>Ejercicio 9 - Indicador de carga AJAX con logo animado.</h4>
+                        <p>Realiza una página web que muestre un logo típico de la espera de información en Ajax(ej.
+                            Gif animado) mientras estamos esperando que nos devuelva algún dato con php.
+                        </p>
 
-            </section>
-        </section>
-        <aside class="menuDerecho">
-            <section>
-                <h4>Menú</h4>
-                <h5>Accesos directos a los anexos</h5>
-                <div class="anexosYejerciciosAside">
-                    <ul>
-                        <li><a href="#">Anexo 1 - Introducción a AJAX</a></li>
-                        <li><a href="../2.%20AJAX%20Avanzado/A2.html">Anexo 2 - AJAX avanzado</a></li>
-                    </ul>
-                </div> <!--contenidoAnexos-->
-            </section>
-            <div class="volver"><a href="../T2.html ">Volver atrás</a></div>
-            <div class="volver"><a href="../../index.html">Volver al índice</a></div>
-        </aside>
-    </div>
+                    </section>
+                </section>
+                <aside class="menuDerecho">
+                    <section>
+                        <h4>Menú</h4>
+                        <h5>Accesos directos a los anexos</h5>
+                        <div class="anexosYejerciciosAside">
+                            <ul>
+                                <li><a href="#">Anexo 1 - Introducción a AJAX</a></li>
+                                <li><a href="../2.%20AJAX%20Avanzado/A2.html">Anexo 2 - AJAX avanzado</a></li>
+                            </ul>
+                        </div> <!--contenidoAnexos-->
+                    </section>
+                    <div class="volver"><a href="../T2.html ">Volver atrás</a></div>
+                    <div class="volver"><a href="../../index.html">Volver al índice</a></div>
+                </aside>
+            </div>
 
-</main>
-</body>
+        </main>
+    </body>
 </html>
