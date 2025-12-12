@@ -277,13 +277,13 @@ code {
     border-left: 4px solid #3a3a3a;
     background: #1e1e1e;
     padding: 12px 16px;
-    margin: 20px 0;
-    margin-right: 30px;
+    margin: 20px 30px 20px 0;
     border-radius: 4px;
     overflow-x: auto;
     font-size: 10pt;
     font-style: italic;
     color: #4b4b4b;
+    width: fit-content;
 }
 
 .code-quote pre {
