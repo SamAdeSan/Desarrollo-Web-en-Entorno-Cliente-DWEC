@@ -12,5 +12,16 @@
     <body>
         <h2><code>Ejercicio 3</code> - Envío de parámetros con AJAX POST y respuesta dinámica.</h2>
 
+        <form id="miFormulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad">
+
+            <button type="button" onclick="ejecutarPHPconPOSTconParametros()">Enviar</button>
+        </form>
+
+        <div id="respuesta"></div>
     </body>
 </html>
